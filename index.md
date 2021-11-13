@@ -12,8 +12,10 @@ Meine selbst erstellten Materialien sind in der Materialiensammlung zu finden:
 
 * [Suchen und Ordnen](https://donze-informatikunterricht.github.io/suchen-und-ordnen/)  
   Listen in Python am Beispiel von Such- und Sortieralgorithmen
-* Simulieren: Game of Life und Ausbreitung eines Krankheitserregers basierend auf zellulären Automaten  
-  von Listen zu zweidimensionalen NumPy-Arrays
+* [Simulieren](https://github.com/donze-informatikunterricht/simulieren)  
+Von Listen zu zweidimensionalen NumPy-Arrays   
+Game of Life und Ausbreitung eines Krankheitserregers basierend auf zellulären Automaten   
+
 
 ## Downloads
 
