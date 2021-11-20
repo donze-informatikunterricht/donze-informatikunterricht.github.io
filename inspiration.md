@@ -36,7 +36,7 @@ Auf dieser Seite sammle ich wertvolle Quellen für generelles Unterrichtsmateria
 * [Informatikbiber](https://www.informatik-biber.ch/de/)
 
 
-## Einzelne Aktivitäten
+## Themen und Aktivitäten
 
 ### Netzwerke
 * [Das Orangenspiel — Routing und Deadlock in Netzwerken](https://classic.csunplugged.org/wp-content/uploads/2014/12/CSUnplugged_OS_2015_v3.2.2_AL_Ak-10.pdf)
@@ -45,3 +45,32 @@ Auf dieser Seite sammle ich wertvolle Quellen für generelles Unterrichtsmateria
 * [QR-Codes](https://www.swisseduc.ch/informatik/theoretische_informatik/qr_codes/)(Swisseduc)
 * [Mal-den-CodeAusmalcodes erstellen für Quizzes und Spiele, kurze Einführung in Barcodes und QR-Codes](https://mal-den-code.de)
 
+### Hardware & Logik
+* [https://www.inf-schule.de/rechner/digitaltechnik/gatter/digitalo](https://www.inf-schule.de/rechner/digitaltechnik/gatter/digitalo)Digitalo: Spielkarten für Logikgatter
+* [Logic-ly (Simulator)](https://logic.ly)
+* [The Ultimate Nerd Game](https://jimmycushnie.itch.io/tung) Für den eigenen Spass, nicht für den Unterricht ;)
+* [Spiele auf itch.io](https://itch.io/games/genre-simulation/tag-logic)
+* [Blick in den Prozessor](https://www.easyzoom.com/imageaccess/217890/e7d464b6244946408d0ee820fd58a044/3670)  
+Intel Celeron D 320 Laughs Microscopically
+
+
+### Fake News 
+* Spiele und Quizzes
+  * [Fake News Quiz (SRF MySchool)](https://www.srf.ch/sendungen/school/medien-und-informatik/fake-news-quiz)
+  * [Fake News Quiz zu Corona (SRF MySchool)](srf.ch/sendungen/myschool/corona-fake-news-quiz)
+  * [Fakefinder von SWR (Spiel)](https://swrfakefinder.de/)
+* [Fake News auf SRF MySchool](https://www.srf.ch/sendungen/school/fake-news)
+* [Fake News erkennen](https://www.srf.ch/sendungen/school/medien-und-informatik/fake-news-wie-erkennen)
+* [Täuschend echt: Der Wolf vom Üetliberg oder wie ein Fake Meme entsteht](https://m.youtube.com/watch?v=4tMHf0MfHYY)
+* [mimikama.at](https://www.mimikama.at/) "Erst denken, dann klicken" – Fake News Portal
+* [Fake News Check: App für Android und iOS](https://www.nibis.de/app-fuer-ios-und-android-smartphones-fake-news-check_9798)
+* Bilder
+  * [Google: Rückwärtssuche für Bilder](https://images.google.com/)
+  * [exifdata.com](https://exifdata.com/) Strukturen in digitalen Bildern erkennen und damit Fakebilder entlarven
+
+## Bildquellen fürs Unterrichtsmaterial
+* [XCDK](https://xkcd.com)  *A webcomic of romance, sarcasm, math, and language.*
+  * Lizenz: CC AT-NC
+  * Für Python: [Matplotlib-Bibliothek für Plots im XKCD-Stil](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xkcd.html)
+* [Pixabay](https://pixabay.com/de/users/peggy_marco-1553824/)  
+  vor allem: Illustationen "Weisse Männchen" von [Peggy und Marco Lachmann-Anke](https://pixabay.com/de/users/peggy_marco-1553824/) auf Pixabay
