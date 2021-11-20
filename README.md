@@ -4,12 +4,13 @@ Auf dieser Seite sammle ich Materialien für den Informatikunterricht am Gymnasi
 
 Ich möchte hier festhalten, wo ich interessante Quellen zu verschiedenen Themen gefunden habe und meine selbst erstellten Materialien sammeln und teilen.
 
-Persönlich arbeite ich am liebsten mit Jupyter Notebooks, weil sie es einerseits erlauben, auch einzelne Codezeilen auszuführen und somit schnell mal etwas auszuprobieren und andererseits mittels Markdown und HTML gleich Spuren festzuhalten und am Ende ein interaktives Skript entsteht. Allerdings habe ich die Erfahrung gemacht, dass sie auch verwirrend lang werden können und hilfreich sein kann, mit Nummerierungen oder Querverweisen zu arbeiten.
+Persönlich arbeite ich am liebsten mit Jupyter Notebooks, weil sie es einerseits erlauben, auch einzelne Codezeilen auszuführen und somit schnell mal etwas auszuprobieren und andererseits mittels Markdown und HTML gleich Spuren festzuhalten und am Ende ein interaktives Skript entsteht. Allerdings habe ich die Erfahrung gemacht, dass sie auch verwirrend lang werden können und es hilfreich sein kann, mit Nummerierungen und Querverweisen zu arbeiten.
 
 ## Meine bisher erstellten Materialien:
 
 * [Suchen und Ordnen](https://donze-informatikunterricht.github.io/suchen-und-ordnen/) – Listen in Python am Beispiel von Such- und Sortieralgorithmen
-* Simulationen: Game of Life und Ausbreitung eines Krankheitserregers, Simulationen basierend auf zellulären Automaten – von Listen zu zweidimensionalen NumPy-Arrays
+* [Simulieren](https://github.com/donze-informatikunterricht/simulieren)  
+  Game of Life und Ausbreitung eines Krankheitserregers, Simulationen basierend auf zellulären Automaten – von Listen zu zweidimensionalen NumPy-Arrays
 
 ---
 
