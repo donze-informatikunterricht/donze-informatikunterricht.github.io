@@ -1,3 +1,5 @@
+[Startseite](./index.md) | [Lernmaterialien](./mein_material.md) | [Downloads](./downloads.md) | [Inspirationsquellen](./inspiration.md) | [Installation Jupyter](./installation_anaconda.md)
+
 # Quellenangaben
 
 ## Text- und Onlinequellen

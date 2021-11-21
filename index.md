@@ -1,6 +1,10 @@
 Startseite | [Lernmaterialien](./mein_material.md) | [Downloads](./downloads.md) | [Inspirationsquellen](./inspiration.md) | [Installation Jupyter](./installation_anaconda.md)
 
-Auf dieser Seite möchte ich interessante [Inspirationsquellen](./inspiration.md) zu verschiedenen Themen festhalten und meine selbst erstellten [Lernmaterialien](./mein_material.md) und [Cheatsheets](./downloads.md) sammeln und teilen.
+# Willkommen
+
+Auf dieser Seite halte ich interessante [Inspirationsquellen](./inspiration.md) zu verschiedenen Themen fest, sammle und teile meine selbst erstellten [Lernmaterialien](./mein_material.md) und [Cheatsheets](./downloads.md).
+
+Mein Material erstelle und sammle ich in erster Linie für mich selbst, aber da ich mich auch gerne vom Material anderer inspirieren lasse, stelle ich es unter der CC-By-NC-Lizenz zur Verfügung (siehe Lizenz unten).
 
 ## Jupyter Notebooks
 
