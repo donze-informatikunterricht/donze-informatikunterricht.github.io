@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./beispiele/todo-styles.css">
+    <link rel="stylesheet" href="./beispiele/memory-styles.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Ergänzungsfach Informatik</title>
+</head>
+<body>
+      
+    <section class="navbar"></section>
+    <ul class="nav">
+        <li class="nav"><a id="home" class="active">Beschreibung</a></li>
+        <li class="dropdown nav">
+            <a href="javascript:void(0)" class="dropbtn">Beispielprojekte</a>
+            <ul class="dropdown-content">
+              <li class="nav"><a id="memory">Memoryspiel</a></li>
+              <li class="nav"><a id="todo">To-Do-Liste</a></li>
+              <li class="nav"><a id="learning-cards">Vokabeltrainer</a></li>
+            </ul>
+        </li>
+        <li class="nav"><a id="contact">Noch Fragen?</a></li>
+    </ul>
+    
+    <div class="contentContainer">
+
+        <!-- HOME -->
+        <div id="home-content">
+            <section class="pageTitle">
+                <h1>Ergänzungsfach Informatik</h1>
+            </section>
+
+            <section class="mainContainer">
+                <details>
+                    <summary>Lesen Sie die Kursbeschreibung</summary>
+            
+                    <p>Es gibt kaum einen Lebensbereich, der ohne Informatik auskommt – und auch kaum ein Studienfach. Zu verstehen, wie Programme entstehen und von der Maschine ausgeführt werden, ist von grossem Nutzen. Im Ergänzungsfach Informatik lernen Sie programmieren oder vertiefen und erweitern Ihre bereits vorhandenen Programmierkenntnisse.</p>
+                    <p>In den ersten Wochen werden Sie die Grundkonzepte des Programmierens kennenlernen und auf spielerische Weise eine erste eigene Applikation entwickeln – ein kleines Spiel, eine interaktive Kurzgeschichte, ein Musikstück oder eine Grafik. Dabei werden Sie erfahren, wie Programme ausgeführt werden und wie Algorithmen grafisch dargestellt werden können. Es gibt zwar zahlreiche Programmiersprachen, die Grundkonzepte sind aber universell. Dies wird deutlich, wenn Sie die Webseite, in die Sie Ihre erste Applikation einbinden, mit Ihrer eigenen Web-Applikation erweitern, die Sie auf sämtlichen Geräten nutzen können – auch auf dem Mobiltelefon. Abhängig von den gewählten Projekten sowie den Interessen und Bedürfnissen der Gruppe soll mindestens ein weiteres Thema vertieft werden: Netzwerke, digitale Medien, User Experience, Sicherheit, Datenanalyse oder -visualisierung, Hardware, ein Bereich aus der theoretischen Informatik… Ihre Vorschläge sind willkommen.</p>
+                    <p>Das Ergänzungsfach Informatik ist praktisch, vielseitig, bietet verschiedene Wahlmöglichkeiten und richtet sich bewusst an ein breites Publikum. Haben Sie Freude am Experimentieren, Problemlösen oder analytischen Denken, arbeiten Sie gerne kreativ, sind sprachlich interessiert, wollen schon lange wissen, was hinter Webseiten und Apps steckt oder haben Sie eine ganz konkrete Vorstellung eines Tools, das Sie gerne selbst entwickeln möchten? Vorwissen benötigen Sie keines. Falls Sie bereits Programmiererfahrung mitbringen, werden Sie diese ausbauen und Ihre persönlichen Schwerpunkte setzen können.</p>
+            
+                </details>
+            </section>
+        </div> 
+
+        <!-- CONTACT -->
+        <div id="contact-content" class="invisible">
+            <section class="pageTitle">
+                <h1>Weitere Informationen</h1>
+            </section>
+
+            <section class="mainContainer">
+                <p>Haben Sie Fragen oder Wünsche?</p>
+                <p><a href="mailto:alessandradonze@gmx.ch">Schreiben Sie mir eine E-Mail</a>.</p>
+            </section>
+        </div> 
+        
+        <!-- Example: To Do List -->
+
+        <div id="todo-content" class="invisible">
+
+            <section class="pageTitle">
+                <h1>TO-DOs</h1>
+            </section>
+    
+            <section class="mainContainer">
+                <form>
+                    <input type="text" placeholder="Neuer Task">
+                    <button type="submit">➕</button>
+                </form>
+    
+                <div class="todoList">
+                    <ul class="todo-ul">
+                    </ul>
+                    <a class="clearList" id="clearList">Liste Löschen</a>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Example: Memory Game -->
+        <div id="memory-content" class="invisible">
+            <section>
+                <h1>Memory</h1>
+            </section>
+            
+            
+            <section class="memory-game">
+                <div class="memory-card" data-framework="headphones">
+                <div class="front-face">🎧</div>
+                <!--img class="front-face" src="./beispiele/img/aurelia.svg" alt="Aurelia" /-->
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+                <div class="memory-card" data-framework="headphones">
+                <div class="front-face">🎧</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+            
+                <div class="memory-card" data-framework="coder">
+                <div class="front-face">🧑‍💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+                <div class="memory-card" data-framework="coder">
+                <div class="front-face">🧑‍💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+            
+                <div class="memory-card" data-framework="laptop">
+                <div class="front-face">💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+                <div class="memory-card" data-framework="laptop">
+                <div class="front-face">💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+            
+                <div class="memory-card" data-framework="printer">
+                <div class="front-face">🖨</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+                <div class="memory-card" data-framework="printer">
+                <div class="front-face">🖨</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+            
+                <div class="memory-card" data-framework="pixelmonster">
+                <div class="front-face">👾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+                <div class="memory-card" data-framework="pixelmonster">
+                <div class="front-face">👾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+            
+                <div class="memory-card" data-framework="floppy">
+                <div class="front-face">💾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+                <div class="memory-card" data-framework="floppy">
+                <div class="front-face">💾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <script type="text/javascript", src="script.js"></script>
+    <script type="text/javascript", src="./beispiele/todo.js"></script>
+    <script type="text/javascript", src="./beispiele/memory.js"></script>
+</body>
+</html>
