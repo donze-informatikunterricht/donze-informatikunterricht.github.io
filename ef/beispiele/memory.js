@@ -10,7 +10,6 @@ function flipCard() {
   if (lockBoard || this === firstCard) {
     return;
   }
-  //this.classList.toggle("flip");
   this.classList.add("flip");
 
 

@@ -1,14 +1,13 @@
 #todo-content {
     height: 100vh;
-    min-width: 600px;
     background-image: linear-gradient(0deg, #c3c3c3, #660000);
     background-repeat: no-repeat;
     background-size: auto;
-    /*font-family: 'Inconsolata', monospace;*/
+    font-family: 'Inconsolata', monospace;
 }
 
-.mainContainer {
-    width: 600px;
+#todo-content .mainContainer {
+    width: 80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,41 +19,48 @@
 }
 
 #todo-content form {
-    background-color: #FFFFFF;
-    padding: 15px;
+    background-color: white;
+    padding: 5px;
     border-radius: 5px;
     display: flex;
+}
+
+@media (min-width: 576px) {
+    #todo-content .mainContainer {
+        width: 60%;
+    }
+
+    #todo-content form {
+        padding: 3%;
+    }
 }
 
 #todo-content input[type="text"] {
     outline: 0;
     border: none;
-    font-size: 1.2rem;
-    color: #595959;
+    font-size: 1rem;
+    color: #666666;
     flex-grow: 1;
-    justify-content: center; 
-    align-items: center;
+    width: 80%;
 }
 
 #todo-content button {
-    font-size: 1.5rem;
     border-radius: 5px;
-    background-color: #FFFFFF;
+    background-color: white;
     outline: 0;
     border: 1px solid #660000;
-    width: 10%;
 }
 
 #todo-content button:hover {
     background-color: lightpink;
 }
 
-.todoList {
+#todo-content .todoList {
     background-color: lightpink;
     border-radius: 5px;
     margin-top: 20px;
     padding: 10px, 25px;
-    padding: 15px;
+    padding: 5px 15px;
     height: 100%;
 }
 
@@ -67,12 +73,11 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #660000;
-    padding: 15px 0;
-    font-size: 1.2rem;
+    padding: 10px 0;
     color: #595959;
 }
 
-.todoItem {
+#todo-content .todoItem {
     flex-grow: 1; /* Text breiter als Buttons*/
 }
 
@@ -89,11 +94,11 @@
     color: lightcoral;
 }
 
-.todo-list-item {
+#todo-content .todo-list-item {
     transition: all 0.3s ease-out;
 }
 
-.todo-list-item-fall {
+#todo-content .todo-list-item-fall {
     transform: translateY(12rem) rotateZ(10deg);
     opacity: 0; 
 }

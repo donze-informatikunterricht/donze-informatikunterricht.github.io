@@ -1,0 +1,188 @@
+#learningcards-content {
+  /*margin-top: 75px;*/
+  font-family: palanquin, avenir, sans-serif;
+  font-size: 16px;
+  overflow: auto;
+  height: 100vh;
+  /*
+  background-image: linear-gradient(0deg, #c3c3c3, #e992ff);
+  background-repeat: no-repeat;
+  background-size: auto;
+  */
+}
+
+#learningcards-content h1, #learningcards-content h2, #learningcards-content h3, #learningcards-content h4, #learningcards-content h5 {
+  font-family: 'Mountains of Christmas';
+  text-align: center;
+  color: #000060;
+}
+
+#learningcards-content .invisible {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #learningcards-content .xs-only {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  #learningcards-content .hidden-xs {
+    display: none;
+  }
+  #learningcards-content .xs-only {
+    font-size: 1rem;
+    overflow: hidden;
+  }
+}
+
+#learningcards-content #main-container {
+  padding: 1rem;
+}
+
+#learningcards-content #congrats-container {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+#learningcards-content .congrats-emoji {
+  font-size: 5rem;
+}
+
+#learningcards-content #congrats-container h4 {
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#learningcards-content .congrats-text {
+  font-size: 1.25rem;
+  color: #000060;
+  margin-top: 2rem;
+}
+
+#learningcards-content .input-container {
+  width:100%;
+}
+
+#learningcards-content .input-element {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 0.5rem;
+}
+
+#learningcards-content .description {
+  font-size: smaller;
+  font-weight: 200;
+  color: #606060;
+  margin-top: .25rem;
+}
+
+#learningcards-content input {
+  margin: 0px;
+  padding: 1px 5px;
+  font-size: 1rem;
+  border: 0.5px solid lightgray;
+}
+
+#learningcards-content textarea {
+  margin: 0px;
+  border: 0.5px solid lightgray;
+
+}
+
+@media (min-width: 567px) {
+
+  #learningcards-content #main-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #learningcards-content .input-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-gap: 4px;
+  }
+
+  #learningcards-content .input-element-1, 
+  #learningcards-content .input-element-2,
+  #learningcards-content .input-element-3 {
+    width: 100%;
+  }
+
+  #learningcards-content .input-element-4 {
+    grid-column: span 3;
+  }
+
+}
+
+#learningcards-content .buttons {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+#learningcards-content button {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: small;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8d8d8 #d1d1d1 #bababa;
+  border-image: initial;
+  background-color: white;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+#learningcards-content .collapsible {
+  background-color: #808080;
+  color: #f1f1f1;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+#learningcards-content .active, 
+#learningcards-content .collapsible:hover {
+  background-color: #ccc;
+  color:  #606060;
+}
+
+#learningcards-content button.collapsible {
+  border-radius: 0;
+}
+
+#learningcards-content .explanation-container p button:disabled {
+  font-size: .75rem;
+  color: #606060;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+#learningcards-content .content {
+  padding: 0 18px;
+  max-height: 0px;
+  text-align: left;
+  font-size: 0.75rem;
+  overflow: hidden;
+  /* transition: max-height 0.1s ease-out; */
+  background-color: #f1f1f1;
+}
+
+#learningcards-content .explanation-container p button {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: -2px;
+  margin-right: 0px;
+  font-size: smaller;
+}
+

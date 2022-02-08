@@ -47,7 +47,7 @@ function addTodo(todo) {
 }
 
 function checkTodo(e) {
-    let htmlItem = e.target.parentNode;
+    let htmlItem = e.target.parentNode.children[0]; /* The li Element has 3 children, the text and the buttons. */
     if (htmlItem.style.textDecoration == 'line-through') {
         htmlItem.style.textDecoration = 'none';
     } else {
