@@ -3,6 +3,7 @@ document.getElementById("pong").addEventListener("click", showPong);
 document.getElementById("todo").addEventListener("click", showTodo);
 document.getElementById("memory").addEventListener("click", showMemory);
 document.getElementById("learningcards").addEventListener("click", showLearningCards);
+document.getElementById("binhex").addEventListener("click", showBinHex);
 document.getElementById("contact").addEventListener("click", showContact);
 
 document.getElementById("dropbtn").addEventListener("mouseover", handleMouseover);
@@ -96,6 +97,15 @@ function showLearningCards(e) {
     document.querySelector('#learningcards-content').classList.remove("invisible");
     mode = "#learningcards";
 }
+
+function showBinHex(e) {
+    console.log("showing Learning Cards...")
+    closeDropdown(e)
+    hideLastShown()
+    document.querySelector('#binhex-content').classList.remove("invisible");
+    mode = "#binhex";
+}
+
 
 function showContact() {
     console.log("showing Contact...")
