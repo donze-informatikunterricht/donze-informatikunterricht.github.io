@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Zahlensysteme</title>
+  </head>
+  <body>
+    <h1>Zahlensysteme</h1>
+    <p>Im Gegensatz zum uns geläufigen Dezimalsystem (Zehnersystem), in dem wir die Ziffern 0 bis 9 zur Verfügung haben, verwendet das Binärsystem lediglich zwei Ziffern, die 0 und die 1.</p>
+    <p>Die Stellenwerte einer Dezimalzahl bilden sich aus Zehnerpotenzen.</p>
+    
+    <div class="beispiel">
+      <h4>Beispiel</h4>
+      <p> Die Zahl 3'476'025<sub>10</sub> setzt sich folgendermassen zusammen:</p>
+      
+      <table>
+        <tr>
+          <th>1'000'000-er</th>
+          <th>100'000-er</th>
+          <th>10'000-er</th>
+          <th>1'000-er</th>
+          <th>100-er</th>
+          <th>10-er</th>
+          <th>1-er</th>
+        </tr>
+        <tr>
+          <td>10<sup>6</sup></td>
+          <td>10<sup>5</sup></td>
+          <td>10<sup>4</sup></td>
+          <td>10<sup>3</sup></td>
+          <td>10<sup>2</sup></td>
+          <td>10<sup>1</sup></td>
+          <td>10<sup>0</sup></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>4</td>
+          <td>7</td>
+          <td>6</td>
+          <td>0</td>
+          <td>2</td>
+          <td>5</td>
+        </tr>
+      </table>
+
+    </div>
+    
+    <h2>Binärzahlen</h2>
+    <p>
+      Das Binärsystem ist analog aufgebaut, nur gibt es anstelle der zehn Ziffern nur deren zwei (0 und 1), weshalb die Stellenwerte Zweierpotenzen entsprechen:
+    </p>
+
+    <div class="beispiel">
+      <h4>Beispiel</h4>
+      <p> Die Zahl 10101011<sub>2</sub> setzt sich folgendermassen zusammen:</p>
+
+      <table>
+        <tr>
+          <th>128-er</th>
+          <th>64-er</th>
+          <th>32-er</th>
+          <th>16-er</th>
+          <th>8-er</th>
+          <th>4-er</th>
+          <th>2-er</th>
+          <th>1-er</th>
+        </tr>
+        <tr>
+          <td>2<sup>7</sup></td>
+          <td>2<sup>6</sup></td>
+          <td>2<sup>5</sup></td>
+          <td>2<sup>4</sup></td>
+          <td>2<sup>3</sup></td>
+          <td>2<sup>2</sup></td>
+          <td>2<sup>1</sup></td>
+          <td>2<sup>0</sup></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Bit und Byte</h3>
+    <p>Eine Dezimalstelle entspricht einem Bit, der kleinsten Informationseinheit. Sie kann die beiden Werte 0 und 1 annehmen. Mit einem Bit können also zwei Werte dargestellt werden.</p>
+    <p>Um grössere Zahlen darzustellen, werden mehrere Bits verwendet. Eine Gruppe von <strong>8 Bits</strong> nennt man <strong>Byte</strong>.</p> 
+    <p>Mit einem Byte können 2<sup>8</sup> (also 256) Zahlen dargestellt werden: von 0000 0000<sub>2</sub> bis 1111 1111<sub>2</sub> (255<sub>10</sub>).</p>
+
+    <h2>Hexadezimalzahlen</h2>
+
+    <p>Daten werden binär gespeichert und verarbeitet, aber oft werden sie hexadezimal repräsentiert.</p> 
+    <p>Das Hexadezimalsystem verwendet 16 Ziffern – das sind mehr als das uns geläufige Dezimalsystem verwendet. Da uns nur die Ziffern von 0 bis 9 zur Verfügung stehen, verwenden wir für 10 bis 15 die Buchstaben <strong>A</strong> (für 10) bis <strong>F</strong> (für 15). Somit haben wir die nötigen 16 Ziffern von 0 bis F.</p>
+
+    <p>Zur binären Darstellung der Zahlen 0 bis 15 sind vier Stellen nötig. Die Umwandlung einer Binärzahl in eine Hexadezimalzahl ist dadurch sehr einfach: Je 4 Bits zusammen entsprechen einer Hexadezimalstelle.</p>
+    
+    <div class="beispiel">
+      <h4>Beispiel</h4>
+      <p> Die Zahl 1100 0011 0101 0100 1011 1101 1010<sub>2</sub> setzt sich folgendermassen zusammen:</p>
+      <table class="hex-table">
+        <tr>
+          <th>16'777'216-er</th>
+          <th>1'058'576-er</th>
+          <th>65'536-er</th>
+          <th>4'096-er</th>
+          <th>256-er</th>
+          <th>16-er</th>
+          <th>1-er</th>
+        </tr>
+        <tr>
+          <td>16<sup>6</sup></td>
+          <td>16<sup>5</sup></td>
+          <td>16<sup>4</sup></td>
+          <td>16<sup>3</sup></td>
+          <td>16<sup>2</sup></td>
+          <td>16<sup>1</sup></td>
+          <td>16<sup>0</sup></td>
+        </tr>
+        <tr>
+          <td>1100 </td>
+          <td>0011</td>
+          <td>0101</td>
+          <td>0100</td>
+          <td>1011</td>
+          <td>1101</td>
+          <td>1010</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>3</td>
+          <td>5</td>
+          <td>4</td>
+          <td>B</td>
+          <td>D</td>
+          <td>A</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Probieren Sie's aus!</h3>
+    <p>Klicken Sie die runden Stellen der Binärzahl an, um die Bits zu aktivieren.</p>
+    
+    <div id="calculator">
+      <table id="calculator-table">
+        <tr>
+          <th>128-er</th>
+          <th>64-er</th>
+          <th>32-er</th>
+          <th>16-er</th>
+          <th>8-er</th>
+          <th>4-er</th>
+          <th>2-er</th>
+          <th>1-er</th>
+        </tr>
+        <tr>
+          <td>2<sup>7</sup></td>
+          <td>2<sup>6</sup></td>
+          <td>2<sup>5</sup></td>
+          <td>2<sup>4</sup></td>
+          <td>2<sup>3</sup></td>
+          <td>2<sup>2</sup></td>
+          <td>2<sup>1</sup></td>
+          <td>2<sup>0</sup></td>
+        </tr>
+        <tr>
+          <td><button id="bit7" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit6" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit5" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit4" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit3" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit2" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit1" onclick="updateNumber(this.id)">0</button></td>
+          <td><button id="bit0" onclick="updateNumber(this.id)">0</button></td>
+        </tr>
+        <tr>
+          <td id="digit7">0</td>
+          <td id="digit6">0</td>
+          <td id="digit5">0</td>
+          <td id="digit4">0</td>
+          <td id="digit3">0</td>
+          <td id="digit2">0</td>
+          <td id="digit1">0</td>
+          <td id="digit0">0</td>
+        </tr>
+      </table>
+
+      <table class="hex-table">
+        <tr>
+          <th>16-er</th>
+          <th>1-er</th>
+        </tr>
+        <tr>
+          <td>16<sup>1</sup></td>
+          <td>16<sup>0</sup></td>
+        </tr>
+        <tr>
+          <td>
+            <span id="binBit7">0</span> <span id="binBit6">0</span> <span id="binBit5">0</span> <span id="binBit4">0</span>
+          </td>
+          <td>
+            <span id="binBit3">0</span> <span id="binBit2">0</span> <span id="binBit1">0</span> <span id="binBit0">0</span>
+          </td>
+        </tr>
+        <tr>
+          <td id="hex1">0</td>
+          <td id="hex0">0</td>
+        </tr>
+      </table>
+
+      <div class="overview">
+        <dl>
+          <dt>Binär</dt>
+          <dd id="binaryNumber">00000000</dd>
+          <dt>Dezimal</dt>
+          <dd id="decimalNumber">0</dd>
+          <dt>Hexadezimal</dt>
+          <dd id="hexNumber">00</dd>
+      </div>
+    </div>
+    
+    <div class="aufgabe">
+      <h3>Überprüfen Sie Ihr Verständnis</h3>
+      Beantworten Sie die Fragen in die Eingabefelder und klicken Sie zum Korrigieren jeweils auf Sherlock 🧐.
+      <ul>
+        <li>Wie viele Bits hat ein Byte?
+          <input type="text" id="bytesize" name="lname">
+          <span class="emoji" onclick="document.getElementById('bytesize').value===8?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+        </li>
+        <li>Welches ist die <em>kleinste</em> Dezimalzahl, die mit einem Byte dargestellt werden kann?
+          <input type="text" id="bytesize_min" name="lname">
+          <span class="emoji" onclick="document.getElementById('bytesize_min').value===0?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+        </li>
+        <li>Welches ist die <em>grösste</em> Dezimalzahl, die mit einem Byte dargestellt werden kann?
+          <input type="text" id="bytesize_max" name="lname">
+          <span class="emoji" onclick="document.getElementById('bytesize_max').value===255?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+        </li>
+        <li>Welches ist die <em>grösste</em> Hexadezimalzahl, die mit einem Byte dargestellt werden kann?
+          <input type="text" id="bytesize_max_hex" name="lname">
+          <span class="emoji" onclick="['FF','#FF','ff','#ff'].includes(document.getElementById('bytesize_max_hex').value) ?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./converter.js"></script>
+  </body>
+</html>
+
