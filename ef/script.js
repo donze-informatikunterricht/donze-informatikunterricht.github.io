@@ -99,7 +99,7 @@ function showLearningCards(e) {
 }
 
 function showBinHex(e) {
-    console.log("showing Learning Cards...")
+    console.log("showing Bin Hex Intro...")
     closeDropdown(e)
     hideLastShown()
     document.querySelector('#binhex-content').classList.remove("invisible");
