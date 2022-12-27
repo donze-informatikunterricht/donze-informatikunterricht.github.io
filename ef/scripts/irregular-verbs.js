@@ -1,6 +1,6 @@
 "use strict";
 
-var irregularVerbs = [
+const irregularVerbs = [
     {infinitive: "to be", simplePast: "was / were", pastParticiple: "been", germanTranslation: "sein"},
     {infinitive: "to beat", simplePast: "beat", pastParticiple: "beaten", germanTranslation: "schlagen; besiegen"},
     {infinitive: "to become", simplePast: "became", pastParticiple: "become", germanTranslation: "werden"},
@@ -93,19 +93,19 @@ var irregularVerbs = [
     {infinitive: "to wear", simplePast: "wore", pastParticiple: "worn", germanTranslation: "tragen (Kleidung)"},
     {infinitive: "to win", simplePast: "won", pastParticiple: "won", germanTranslation: "gewinnen"},
     {infinitive: "to write", simplePast: "wrote", pastParticiple: "written", germanTranslation: "schreiben"}];
-var sessionInfo = { verbList: irregularVerbs };
-var fieldNames = ['infinitive', 'simplePast', 'pastParticiple', 'germanTranslation'];
+const sessionInfo = { verbList: irregularVerbs };
+const fieldNames = ['infinitive', 'simplePast', 'pastParticiple', 'germanTranslation'];
 
-var infinitiveField = document.getElementById("infinitive");
-var simplePastField = document.getElementById("simplePast");
-var pastParticipleField = document.getElementById("pastParticiple");
-var germanTranslationField = document.getElementById("germanTranslation");
-var germanTranslationField2 = document.getElementById("germanTranslation2");
+const infinitiveField = document.getElementById("infinitive");
+const simplePastField = document.getElementById("simplePast");
+const pastParticipleField = document.getElementById("pastParticiple");
+const germanTranslationField = document.getElementById("germanTranslation");
+const germanTranslationField2 = document.getElementById("germanTranslation2");
 
 initialise();
 
 function setValue(id, newValue) {
-    var s = document.getElementById(id);
+    let s = document.getElementById(id);
     s.value = newValue;
 }
 
@@ -145,7 +145,7 @@ function initialise() {
 }
 
 function showVerb() {
-    var index = sessionInfo.shownVerbIndex;
+    let index = sessionInfo.shownVerbIndex;
     infinitiveField.value = sessionInfo.verbList[index].infinitive;
     simplePastField.value = sessionInfo.verbList[index].simplePast;
     pastParticipleField.value = sessionInfo.verbList[index].pastParticiple;
@@ -177,11 +177,11 @@ function deleteVerb() {
 
 function toggleCollapsible() {
 
-    var collapsible = document.getElementsByClassName("collapsible");
+    let collapsible = document.getElementsByClassName("collapsible");
     collapsible[0].classList.toggle("active");
     collapsible[0].innerHTML === "Show Explanations" ? collapsible[0].innerHTML = 'Hide Explanations' : collapsible[0].innerHTML = 'Show Explanations';
 
-    var content = collapsible[0].nextElementSibling;
+    let content = collapsible[0].nextElementSibling;
     if (content.style.maxHeight) {
         content.style.maxHeight = null;
     } else {
