@@ -15,6 +15,7 @@ html {
 .contentContainer {
   width: 100%;
   margin: auto;
+  height: fit-content;
 }
 
 #home-content, #contact-content {
@@ -40,6 +41,7 @@ li.nav {
   float: left;
 }
 
+
 li.nav a, .dropbtn {
   display: inline-block;
   color: white;
@@ -48,12 +50,9 @@ li.nav a, .dropbtn {
   text-decoration: none;
 }
 
+
 li.nav a:hover, .dropdown:hover .dropbtn {
   background-color: red;
-}
-
-li.nav.dropdown {
-  /*display: inline-block;*/
 }
 
 .dropdown-content {
@@ -106,20 +105,14 @@ details p{
     font-size: large;
   }
 
-  ul.nav {
-    width: 80%;
-    margin: auto;
-  }
-
   h1 {
     padding: 30px;
     font-size: xx-large;
     font-weight: 800;
   }
 
-  .contentContainer {
-    width: 80%;
-    margin: auto;
+  #home-content, #contact-content {
+    padding: 0 10%;
   }
 
 }
