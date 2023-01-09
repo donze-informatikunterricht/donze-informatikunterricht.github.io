@@ -1,10 +1,12 @@
+"use strict;"
+
 const cards = document.querySelectorAll(".memory-card");
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-let points 
+let points;
 
 function flipCard() {
   if (lockBoard || this === firstCard) {
