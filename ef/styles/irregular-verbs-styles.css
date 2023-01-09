@@ -1,14 +1,8 @@
 #learningcards-content {
-  /*margin-top: 75px;*/
   font-family: palanquin, avenir, sans-serif;
   font-size: 16px;
   overflow: auto;
   height: 100vh;
-  /*
-  background-image: linear-gradient(0deg, #c3c3c3, #e992ff);
-  background-repeat: no-repeat;
-  background-size: auto;
-  */
 }
 
 #learningcards-content h1, #learningcards-content h2, #learningcards-content h3, #learningcards-content h4, #learningcards-content h5 {
@@ -174,7 +168,6 @@
   text-align: left;
   font-size: 0.75rem;
   overflow: hidden;
-  /* transition: max-height 0.1s ease-out; */
   background-color: #f1f1f1;
 }
 
