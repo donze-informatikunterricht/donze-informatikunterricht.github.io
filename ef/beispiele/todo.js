@@ -1,5 +1,3 @@
-"use strict";
-
 // Selectors
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
 document.querySelector('.todo-ul').addEventListener('click', handleButtonClickDeleteOrCheck);

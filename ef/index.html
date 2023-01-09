@@ -1,795 +1,574 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Mountains+of+Christmas:wght@400;700&family=Palanquin:wght@100;200;300;400;500;600;700&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./styles/scratch-styles.css">
-    <link rel="stylesheet" href="./styles/memory-styles.css">
-    <link rel="stylesheet" href="./styles/todo-styles.css">
-    <link rel="stylesheet" href="./styles/irregular-verbs-styles.css">
-    <link rel="stylesheet" href="./styles/bin-hex-styles.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Mountains+of+Christmas:wght@400;700&family=Palanquin:wght@100;200;300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./beispiele/scratch-styles.css">
+    <link rel="stylesheet" href="./beispiele/memory-styles.css">
+    <link rel="stylesheet" href="./beispiele/todo-styles.css">
+    <link rel="stylesheet" href="./beispiele/irregular-verbs-styles.css">
+    <link rel="stylesheet" href="./beispiele/bin-hex-styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Ergänzungsfach Informatik</title>
 </head>
-
 <body>
-
-    <header class="navbar">
-        <nav>
-            <ul class="nav">
-                <li class="nav"><a id="home" class="active">Beschreibung</a></li>
-                <li class="dropdown nav">
-                    <a href="#" id="dropbtn" class="dropbtn">Beispielprojekte</a>
-                    <ul class="dropdown-content">
-                        <li class="nav"><a id="scratchgames">Games mit Scratch</a></li>
-                        <li class="nav"><a id="memory">Memoryspiel</a></li>
-                        <li class="nav"><a id="todo">To-Do-Liste</a></li>
-                        <li class="nav"><a id="learningcards">Lernkärtchen</a></li>
-                        <li class="nav"><a id="binhex">Zahlensysteme</a></li>
-                    </ul>
-                </li>
-                <li class="nav"><a id="contact">Noch Fragen?</a></li>
+      
+    <section class="navbar">
+    <ul class="nav">
+        <li class="nav"><a id="home" class="active">Beschreibung</a></li>
+        <li class="dropdown nav">
+            <a href="#" id="dropbtn" class="dropbtn">Beispielprojekte</a>
+            <ul class="dropdown-content">
+              <li class="nav"><a id="pong">Pong</a></li>
+              <li class="nav"><a id="memory">Memoryspiel</a></li>
+              <li class="nav"><a id="todo">To-Do-Liste</a></li>
+              <li class="nav"><a id="learningcards">Lernkärtchen</a></li>
+              <li class="nav"><a id="binhex">Zahlensysteme</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <section class="contentContainer">
+        </li>
+        <li class="nav"><a id="contact">Noch Fragen?</a></li>
+    </ul>
+</section>
+    
+    <div class="contentContainer">
 
         <!-- HOME -->
         <div id="home-content">
-            <h1>Ergänzungsfach Informatik</h1>
+            <section class="pageTitle">
+                <h1>Ergänzungsfach Informatik</h1>
+            </section>
 
-            <details>
-                <summary>An wen richtet sich das Ergänzungsfach Informatik?</summary>
-                <p>Das Ergänzungsfach Informatik richtet sich bewusst an alle.</p>
-                <p>Die Informatik ist äusserst vielseitig und aus vielen Lebensbereichen und wissenschaftlichen
-                    Disziplinen nicht mehr wegzudenken. Was Sie im Ergänzungsfach Informatik lernen, wird Ihnen im
-                    beruflichen und privaten Alltag nützen – ziemlich sicher auch im Studium.</p>
-            </details>
-            <details>
-                <summary>Welche thematischen Schwerpunkte erwarten mich?</summary>
-                <p>Grundsätzlich ist das Ergänzungsfach Informatik sehr praktisch ausgelegt: Das Programmieren soll
-                    im Zentrum stehen und in verschiedenen (kleineren) Projekten vertieft werden.</p>
-                <p>Welche Schwerpunkte neben dem Programmieren noch gesetzt werden, hängt stark von den Interessen
-                    und Bedürfnissen der Gruppe ab.</p>
-                <p>Die Liste der möglichen Themen ist lange und nicht abschliessend:</p>
-                <ul>
-                    <li>
-                        <strong>Netzwerke</strong> liegen als Thema nahe, da Sie eine Webseite entwickeln werden, in
-                        die Sie Ihre Projekte einbinden werden. Wie tief wir aber eintauchen, werden wir sehen. Wie
-                        das Internet grundsätzlich funktioniert, werden wir aber bestimmt besprechen.
-                    </li>
-                    <li>
-                        <strong>User Experience</strong> kann ebenfalls einen Schwerpunkt bilden: Wie schaffen wir
-                        es, dass unsere Seiten und Applikationen ansprechend und einfach benutzbar sind? Vor allem
-                        wenn Sie künstlerisch begabt oder sehr kreativ sind, können Sie auch etwas fürs Auge
-                        gestalten. Wichtig ist dabei, nicht nur an sich selbst zu denken: Moderne Seiten und
-                        Applikationen sollen auch von Menschen mit einer Beeinträchtigung bedient werden können und
-                        auf verschiedenen Bildschirmgrössen gut aussehen.
-                    </li>
-                    <li>
-                        <strong>Grafiken und Dateiformate</strong> bieten sich als Thema an, wenn Sie grafische
-                        Inhalte einbinden möchten. Welche Formate haben welche Eigenschaften? Welches eignet sich am
-                        besten? Reicht es, einen Kompromiss zwischen Qualität und Dateigrösse zu finden oder lohnt
-                        es sich, selbst eine Vektorgrafik zu programmieren? Auch andere Dateiformate können
-                        interessant sein, beispielsweise wenn Sie keine Datenbank haben, aber Ihre Seite mit Daten
-                        füttern wollen, etwa für eine Lernkärtchenapplikation.
-                    </li>
-                    <li>
-                        <strong>Datenbanken</strong> sind nötig, wenn Daten dauerhaft gespeichert und einfach
-                        gefunden werden sollen. Wie lange &laquo;leben&raquo; Daten eigentlich auf einer Webseite?
-                        Gibt es neben Datenbanken noch andere Möglichkeiten, Daten zu speichern? Braucht es eine
-                        externe Lösung oder reicht dazu der Web-Browser und wenn ja, unter welchen Bedingungen?
-                    </li>
-                    <li>
-                        <strong>Datenvisualisierung</strong> kann ein weiteres Thema sein: Vielleicht möchten Sie
-                        Abstimmungsresultate grafisch darstellen. Was vor etwa zehn Jahren bei der New York Times
-                        seinen Anfang nahm, wird heute nicht nur von Medienhäusern eingesetzt und macht den Inhalt
-                        von Datensammlungen sichtbar.
-                    </li>
-                    <li>
-                        <strong>Sicherheit und Kryptografie</strong> Sobald Sie mit Ihrer Seite persönliche Daten
-                        erheben, müssen diese auch geschützt sein. Ausserdem wollen Sie verhindern, dass Ihre Seite
-                        von Dritten verändert wird. Zum Thema Sicherheit gehören auch gesellschaftliche Fragen.
-                        Interessant ist aber auch ein Ausflug in die Geschichte, zum Beispiel zu Julius Caesar oder
-                        Alan Touring.
-                    </li>
-                    <li>
-                        <strong>Hardware</strong> ist sehr zentral, obwohl Sie dem Prozessor nicht beim Rechnen
-                        zusehen können. Wie Daten aber gespeichert und verarbeitet werden, was es eigentlich mit den
-                        &laquo;Nullen und Einsen&raquo; auf sich hat, wozu es einen Kühler braucht, worauf Sie beim
-                        Kauf eines Computers besonders achten sollen oder warum der Akku Ihres Smartphones im Winter
-                        nicht so lange hält, können interessante Fragen sein. Bei Interesse können Sie anhand einer
-                        Murmelbahn erfahren, wie der Computer rechnet.<br />
-                        Ein Tipp: Blicken Sie <a
-                            href="https://www.easyzoom.com/imageaccess/e2290924ee40441fac0ea4a59f970b5f"
-                            target="_blank">hier</a> mal in einen Prozessor... Wenn es Sie interessiert, können wir
-                        auch thematisieren, wie ein Prozessor genau funktioniert und einzelne Schaltungen bauen oder
-                        simulieren.
-                    </li>
-                    <li>
-                        <strong>Simulationen</strong> werden in der Forschung, aber auch in der Industrie sehr
-                        häufig eingesetzt, um Erkenntnisse zu gewinnen und in relativ kurzer Zeit verschiedene
-                        Szenarien durchzuprobieren. Dadurch kann Zeit und Geld gespart werden. Jeder Simulation
-                        liegt ein Modell zugrunde – ein reduziertes, formal beschriebenes Abbild der Wirklichkeit.
-                        Es ist der komplizierteste Teil der Simulation und erfordert ein fundiertes Fachwissen des
-                        simulierten Bereiches. Der Output ist in der Regel grafisch, damit gut sichtbar wird,
-                        welchen Einfluss die Eingangsparameter auf das simulierte System haben. Einfache
-                        Simulationen können gut als Projekt realisiert werden.
-                    </li>
-                    <li>
-                        <strong>Bereiche aus der theoretischen Informatik</strong> wie formale Sprachen, Logik,
-                        Automaten, Algorithmen und deren Laufzeit oder Speicherverbrauch können wir ebenfalls gerne
-                        thematisieren. Für viele dieser Themen eignet sich ein spielerischer Ansatz. Lassen Sie sich
-                        also nicht vom Stichwort &laquo;theoretisch&raquo; abschrecken.
-                    </li>
-                </ul>
-                <p>Sie sollen profitieren. Melden Sie ihre Wünsche an.</p>
-            </details>
-            <details>
-                <summary>Sollte ich Vorkenntnisse mitbringen?</summary>
-                <p>Das Ergänzungsfach Informatik richtet sich an alle. Es werden keinerlei Vorkenntnisse
-                    vorausgesetzt – Anfängerinnen und Anfänger wie Fortgeschrittene sind gleichermassen willkommen.
-                </p>
-                <p>Dies soll aber nicht heissen, dass Vorwissen überflüssig ist. Vielleicht haben Sie schon viel
-                    programmiert, zu Hause das Netzwerk eingerichtet oder Grafiken erstellt oder Sie interessieren
-                    sich gar für Algorithmen.</p>
-                <p>Programmierprojekte lassen sich auf jedem Niveau realisieren. Sie werden auf jeden Fall davon
-                    profitieren und erhalten die Möglichkeit, eigene Schwerpunkte zu setzen. Wenn Sie schon eine
-                    Grundlage haben, können Sie darauf aufbauen und diese nach Ihren Bedürfnissen erweitern. Falls
-                    Sie noch kein Vorwissen haben, werden Sie dank dem spielerischen Einstieg schnell erste
-                    Erfahrungen machen und mit den neu erworbenen Kenntnissen ein spannendes Projekt realisieren.
-                </p>
-            </details>
-            <details>
-                <summary>Gibt es sonstige Voraussetzungen?</summary>
-                <p>Eine gewisse Neugierde und Offenheit sind hilfreiche Eigenschaften. Analytisches Denken und eine
-                    präzise Ausdrucksweise bilden zwar eine gute Ausgangslage, werden aber auch trainiert.</p>
-                <p>Fürs Programmieren besonders hilfreich ist es, wenn Sie gerne knobeln und sich allgemein nicht
-                    schnell entmutigen lassen. <strong>Trauen Sie sich, Dinge auszuprobieren.</strong> Fehler
-                    gehören dazu und sind sogar willkommen. Sie werden lernen, Fehlermeldungen für sich zu nutzen.
-                </p>
-            </details>
-            <details>
-                <summary>Mit welchen Programmiersprachen wird gearbeitet?</summary>
-                <p>Ganz generell spielt es keine Rolle, welche Programmiersprache Sie lernen, denn die
-                    zugrundeliegenden Konzepte sind universell.</p>
-                <p>Algorithmen beschreiben, wie wir ein Problem mit einem Programm lösen wollen und können auf
-                    verschiedene Weise grafisch dargestellt werden. Parallel zu diesem eher theoretischen Einstieg
-                    werden Sie mit der grafischen Programmiersprache Scratch arbeiten. Sie macht besonders gut
-                    sichtbar, wie Programme strukturiert sind und abgearbeitet werden, ist intuitiv und macht
-                    Spass.<br />
-                    Scratch kann auf einer Weboberfläche verwendet werden. Sie können Ihre Programme dadurch auch
-                    mit dem Mobiltelefon ausprobieren und benutzen.</p>
 
-                <p>Sobald Sie die Grundlagen des Programmierens kennengelernt haben, werden wir diese anhand der
-                    Sprache JavaScript vertiefen und anwenden. JavaScript ist die Sprache des Internets. Webseiten
-                    bestehen aus HTML, das für die Struktur einer Seite verantwortlich ist, CSS für das Styling und
-                    JavaScript für die interaktiven Teile. Je nach Bedürfnis werden Sie mehr oder weniger HTML und
-                    CSS verwenden, aber wir werden eine Webseite erstellen, in der Ihre Programme laufen sollen.
-                    Beispiele dafür finden Sie auf dieser Seite unter Beispiele. Die hier gezeigten Beispiele sind
-                    bewusst einfach gehalten. Sie können als Basis für Ihre Projekte dienen, müssen aber nicht.</p>
-
-                <p>Falls Sie das Ergänzungsfach Informatik gerne besuchen würden, aber gleichzeitig auch ein bereits
-                    bestehendes Projekt in einer anderen Sprache vertiefen möchten oder unbedingt eine andere
-                    Sprache kennenlernen möchten, melden Sie sich bitte bei mir. Es ist mir wichtig, auch Sie zu
-                    unterstützen.</p>
-            </details>
-            <details>
-                <summary>Welche Hard- und Software wird verwendet?</summary>
-                <p>Als Programmierumgebung werden wir Visual Studio Code verwenden, einen kostenlosen Code-Editor,
-                    der für sämtliche Plattformen verfügbar ist und für den viele praktische Erweiterungen
-                    existieren und in dem es sich professionell arbeiten lässt. Als Web-Browser eignet sich
-                    besonders Chrome. Grundsätzlich können aber alle modernen Web-Browser eingesetzt werden. Wenn
-                    Sie möchten, können Sie auch andere (moderne) Web-Browser verwenden.</p>
-                <p>Die Inhalte sind unabhängig vom Betriebssystem. Sie können auf Ihrem eigenen Laptop arbeiten.
-                    <em>Tablets eignen sich leider nicht zum Programmieren.</em>
-                </p>
-            </details>
-            <details>
-                <summary>Lesen Sie noch einmal die Kursbeschreibung</summary>
-                <p>Es gibt kaum einen Lebensbereich, der ohne Informatik auskommt – und auch kaum ein Studienfach.
-                    Zu verstehen, wie Programme entstehen und von der Maschine ausgeführt werden, ist von grossem
-                    Nutzen. Im Ergänzungsfach Informatik steht das Programmieren im Zentrum: Sie lernen programmieren 
-                    oder vertiefen und erweitern Ihre bereits vorhandenen Programmierkenntnisse.</p>
-                <p>In den ersten Wochen werden Sie die Grundkonzepte des Programmierens kennenlernen und auf
-                    spielerische Weise eine erste eigene Applikation entwickeln – ein kleines Spiel, eine
-                    interaktive Kurzgeschichte, ein Musikstück oder eine Grafik. Dabei werden Sie erfahren, wie
-                    Programme ausgeführt werden. Es gibt zwar zahlreiche Programmiersprachen, die Grundkonzepte sind 
-                    aber universell. Dies wird deutlich, wenn Sie die Webseite, in die Sie Ihre erste Applikation einbinden, 
-                    mit Ihrer eigenen Web-Applikation erweitern, die Sie auf sämtlichen Geräten nutzen können – auch auf dem 
-                    Smartphone. Abhängig von den gewählten Projekten sowie den Interessen und Bedürfnissen der Gruppe soll 
-                    mindestens ein weiteres Thema vertieft werden: Netzwerke, digitale Medien, User Experience, Sicherheit,
-                    Datenanalyse oder -visualisierung, Hardware, ein Bereich aus der theoretischen Informatik… Ihre
-                    Vorschläge sind willkommen.</p>
-                <p>Das Ergänzungsfach Informatik ist praktisch, vielseitig, bietet verschiedene Wahlmöglichkeiten
-                    und richtet sich bewusst an ein breites Publikum. Haben Sie Freude am Experimentieren,
-                    Problemlösen oder analytischen Denken, arbeiten Sie gerne kreativ, sind sprachlich interessiert,
-                    wollen schon lange wissen, was hinter Webseiten und Apps steckt oder haben Sie eine ganz
-                    konkrete Vorstellung eines Tools, das Sie gerne selbst entwickeln möchten? Vorwissen benötigen
-                    Sie keines. Falls Sie bereits Programmiererfahrung mitbringen, werden Sie diese ausbauen und
-                    Ihre persönlichen Schwerpunkte setzen können.</p>
-            </details>
-            <details>
-                <summary>Haben Sie Fragen oder spezifische Wünsche?</summary>
-                <p>Oder sind Sie unsicher, ob das Ergänzungsfach Informatik das Richtige für Sie ist?</p> 
-                <p>Schreiben Sie mir per Teams oder senden Sie mir eine E-Mail.</p>
-            </details>
-
-            <p>Ich freue mich auf Sie.</p>
+            
+            <section class="mainContainer">
+                <details>
+                    <summary>An wen richtet sich das Ergänzungsfach Informatik?</summary>
+                    <p>Das Ergänzungsfach Informatik richtet sich bewusst an alle.</p> 
+                    <p>Die Informatik ist äusserst vielseitig und aus vielen Lebensbereichen und wissenschaftlichen Disziplinen nicht mehr wegzudenken. Was Sie im Ergänzungsfach Informatik lernen, wird Ihnen im beruflichen und privaten Alltag nützen – ziemlich sicher auch im Studium.</p>
+                </details>
+                <details>
+                    <summary>Welche thematischen Schwerpunkte erwarten mich?</summary>
+                    <p>Grundsätzlich ist das Ergänzungsfach Informatik sehr praktisch ausgelegt: Das Programmieren soll im Zentrum stehen und in verschiedenen (kleineren) Projekten vertieft werden.</p>
+                    <p>Welche Schwerpunkte neben dem Programmieren noch gesetzt werden, hängt stark von den Interessen und Bedürfnissen der Gruppe ab.</p>
+                    <p>Die Liste der möglichen Themen ist lange und nicht abschliessend:</p> 
+                    <ul>
+                        <li>
+                            <strong>Netzwerke</strong> liegen als Thema nahe, da Sie eine Webseite entwickeln werden, in die Sie Ihre Projekte einbinden werden. Wie tief wir aber eintauchen, werden wir sehen. Wie das Internet grundsätzlich funktioniert, werden wir aber bestimmt besprechen.
+                        </li>
+                        <li>
+                            <strong>User Experience</strong> kann ebenfalls einen Schwerpunkt bilden: Wie schaffen wir es, dass unsere Seiten und Applikationen ansprechend und einfach benutzbar sind? Vor allem wenn Sie künstlerisch begabt oder sehr kreativ sind, können Sie auch etwas fürs Auge gestalten. Wichtig ist dabei, nicht nur an sich selbst zu denken: Moderne Seiten und Applikationen sollen auch von Menschen mit einer Beeinträchtigung bedient werden können und auf verschiedenen Bildschirmgrössen gut aussehen.   
+                        </li>
+                        <li>
+                            <strong>Grafiken und Dateiformate</strong> bieten sich als Thema an, wenn Sie grafische Inhalte einbinden möchten. Welche Formate haben welche Eigenschaften? Welches eignet sich am besten? Reicht es, einen Kompromiss zwischen Qualität und Dateigrösse zu finden oder lohnt es sich, selbst eine Vektorgrafik zu programmieren? Auch andere Dateiformate können interessant sein, beispielsweise wenn Sie keine Datenbank haben, aber Ihre Seite mit Daten füttern wollen, etwa für eine Lernkärtchenapplikation.
+                        </li>
+                        <li>
+                            <strong>Datenbanken</strong> sind nötig, wenn Daten dauerhaft gespeichert und einfach gefunden werden sollen. Wie lange &laquo;leben&raquo; Daten eigentlich auf einer Webseite? Gibt es neben Datenbanken noch andere Möglichkeiten, Daten zu speichern? Braucht es eine externe Lösung oder reicht dazu der Web-Browser und wenn ja, unter welchen Bedingungen?
+                        </li>
+                        <li>
+                            <strong>Datenanalyse oder -visualisierung</strong> kann ein weiteres Thema sein: Vielleicht möchten Sie ein Covid-Dashboard machen oder Abstimmungsresultate grafisch darstellen.
+                        </li>
+                        <li>
+                            <strong>Sicherheit und Kryptografie</strong> Sobald Sie mit Ihrer Seite persönliche Daten erheben, müssen diese auch geschützt sein. Ausserdem wollen Sie verhindern, dass Ihre Seite von Dritten verändert wird. Zum Thema Sicherheit gehören auch gesellschaftliche Fragen. Interessant ist aber auch ein Ausflug in die Geschichte, zum Beispiel zu Julius Caesar oder Alan Touring.
+                        </li>
+                        <li>
+                            <strong>Hardware</strong> ist sehr zentral, obwohl Sie dem Prozessor nicht beim Rechnen zusehen können. Wie Daten aber gespeichert und verarbeitet werden, was es eigentlich mit den &laquo;Nullen und Einsen&raquo; auf sich hat, wozu es den Kühler braucht, worauf Sie beim Kauf eines Computers besonders achten sollen oder warum der Akku Ihres Smartphones im Winter nicht so lange hält, können interessante Fragen sein. Bei dieser Gelegenheit würden wir anhand einer Murmelbahn erfahren, wie der Computer rechnet.<br/>
+                            Ein Tipp: Blicken Sie <a href="https://www.easyzoom.com/imageaccess/e2290924ee40441fac0ea4a59f970b5f" target="_blank">hier</a> mal in einen Prozessor... Wenn es Sie interessiert, können wir auch thematisieren, wie ein Prozessor funktioniert.
+                        </li>
+                        <li>
+                            <strong>Simulationen</strong> werden in der Forschung, aber auch in der Industrie sehr häufig eingesetzt, um Erkenntnisse zu gewinnen und in relativ kurzer Zeit verschiedene Szenarien durchzuprobieren. Dadurch kann Zeit und Geld gespart werden. Jeder Simulation liegt ein Modell zugrunde – ein reduziertes, formal beschriebenes Abbild der Wirklichkeit. Es ist der komplizierteste Teil der Simulation und erfordert ein fundiertes Fachwissen des simulierten Bereiches. Der Output ist in der Regel grafisch, damit gut sichtbar wird, welchen Einfluss die Eingangsparameter auf das simulierte System haben. Einfache Simulationen können gut als Projekt realisiert werden.
+                        </li>
+                        <li>
+                            <strong>Bereiche aus der theoretischen Informatik</strong> wie formale Sprachen, Logik, Automaten, Algorithmen und deren Laufzeit oder Speicherverbrauch können wir gerne thematisieren. Für viele dieser Themen eignet sich ein spielerischer Ansatz. Lassen Sie sich also nicht vom Stichwort &laquo;theoretisch&raquo; abschrecken.
+                        </li>
+                    </ul>
+                    <p>Sie sollen profitieren. Melden Sie ihre Wünsche an.</p>            
+                </details>
+                <details>
+                    <summary>Welche Vorkenntnisse muss ich mitbringen?</summary>
+                    <p>Das Ergänzungsfach Informatik richtet sich an alle. Es werden keinerlei Vorkenntnisse vorausgesetzt – Anfängerinnen und Anfänger wie Fortgeschrittene sind gleichermassen willkommen.</p>
+                    <p>Dies soll aber nicht heissen, dass Vorwissen überflüssig ist. Vielleicht haben Sie schon viel programmiert, zu Hause das Netzwerk eingerichtet oder Grafiken erstellt oder Sie interessieren sich gar für Algorithmen.</p>
+					<p>Programmierprojekte lassen sich auf jedem Niveau realisieren. Sie werden auf jeden Fall davon profitieren und erhalten die Möglichkeit, eigene Schwerpunkte zu setzen. Wenn Sie schon eine Grundlage haben, können Sie darauf aufbauen und sie nach Ihren Bedürfnissen erweitern. Falls Sie noch kein Vorwissen haben, werden Sie dank dem spielerischen Einstieg schnell erste Erfahrungen machen und mit den neu erworbenen Kenntnissen ein spannendes Projekt realisieren.</p>
+                </details>
+                <details>
+                    <summary>Gibt es sonstige Voraussetzungen?</summary>
+                    <p>Eine gewisse Neugierde und Offenheit sind hilfreiche Eigenschaften. Analytisches Denken und eine präzise Ausdrucksweise bilden zwar eine gute Ausgangslage, werden aber auch trainiert.</p>
+					<p>Fürs Programmieren besonders hilfreich ist es, wenn Sie gerne knobeln und sich allgemein nicht schnell entmutigen lassen. <strong>Trauen Sie sich, Dinge auszuprobieren.</strong> Fehler gehören dazu und sind sogar willkommen. Sie werden lernen, sie für sich zu nutzen.</p>
+                </details>
+                <details>
+                    <summary>Mit welchen Programmiersprachen wird gearbeitet?</summary>
+                    <p>Ganz generell spielt es keine Rolle, welche Programmiersprache Sie lernen, denn die zugrundeliegenden Konzepte sind universell.</p>
+                    <p>Gleich zu Beginn werden wir den Begriff des &laquo;Algorithmus&raquo; einführen. Algorithmen beschreiben, wie wir ein Problem mit einem Programm lösen wollen und können auf verschiedene Weise grafisch dargestellt werden. Parallel zu diesem eher theoretischen Einstieg werden Sie mit der grafischen Programmiersprache Scratch arbeiten. Sie macht besonders gut sichtbar, wie Programme strukturiert sind und abgearbeitet werden, ist intuitiv und macht Spass.<br/> 
+                    Scratch kann auf einer Weboberfläche verwendet werden. Sie können Ihre Programme dadurch auch mit dem Mobiltelefon ausprobieren und benutzen.</p>
+                    
+                    <p>Sobald Sie die Grundlagen des Programmierens kennengelernt haben, werden wir diese anhand der Sprache JavaScript vertiefen und anwenden. JavaScript ist die Sprache des Internets. Webseiten bestehen aus HTML, das für die Struktur einer Seite verantwortlich ist, CSS für das Styling und JavaScript für die interaktiven Teile. Je nach Bedürfnis werden Sie mehr oder weniger HTML und CSS verwenden, aber wir werden eine Webseite erstellen, in der Ihre Programme laufen sollen. Beispiele dafür finden Sie auf dieser Seite unter Beispiele. Die hier gezeigten Beispiele sind bewusst einfach gehalten. Sie können als Basis für Ihre Projekte dienen, müssen aber nicht.</p> 
+                        
+                    <p>Falls Sie das Ergänzungsfach Informatik gerne besuchen würden, aber gleichzeitig auch ein bereits bestehendes Projekt in einer anderen Sprache vertiefen möchten oder unbedingt eine andere Sprache kennenlernen möchten, melden Sie sich bitte bei mir. Es ist mir wichtig, auch Sie zu unterstützen.</p>
+                </details>
+                <details>
+                    <summary>Welche Hard- und Software wird verwendet?</summary>
+                    <p>Als Programmierumgebung werden wir Visual Studio Code verwenden, einen kostenlosen Code-Editor, der für sämtliche Plattformen verfügbar ist und für den viele praktische Erweiterungen existieren und in dem es sich professionell arbeiten lässt. Als Web-Browser eignet sich besonders Chrome. Grundsätzlich können aber alle modernen Web-Browser verwendet werden. Wenn Sie unbedingt wollen, können Sie auch andere (moderne) Web-Browser verwenden.</p>
+                    <p>Die Inhalte sind nicht abhängig vom Betriebssystem. Wenn Sie möchten, können Sie auf Ihrem eigenen Laptop arbeiten. Tablets eignen sich leider nicht zum Programmieren.</p>
+                </details>
+                <details>
+                    <summary>Lesen Sie noch einmal die Kursbeschreibung</summary>
+                    <p>Es gibt kaum einen Lebensbereich, der ohne Informatik auskommt – und auch kaum ein Studienfach. Zu verstehen, wie Programme entstehen und von der Maschine ausgeführt werden, ist von grossem Nutzen. Im Ergänzungsfach Informatik lernen Sie programmieren oder vertiefen und erweitern Ihre bereits vorhandenen Programmierkenntnisse.</p>
+                    <p>In den ersten Wochen werden Sie die Grundkonzepte des Programmierens kennenlernen und auf spielerische Weise eine erste eigene Applikation entwickeln – ein kleines Spiel, eine interaktive Kurzgeschichte, ein Musikstück oder eine Grafik. Dabei werden Sie erfahren, wie Programme ausgeführt werden und wie Algorithmen grafisch dargestellt werden können. Es gibt zwar zahlreiche Programmiersprachen, die Grundkonzepte sind aber universell. Dies wird deutlich, wenn Sie die Webseite, in die Sie Ihre erste Applikation einbinden, mit Ihrer eigenen Web-Applikation erweitern, die Sie auf sämtlichen Geräten nutzen können – auch auf dem Mobiltelefon. Abhängig von den gewählten Projekten sowie den Interessen und Bedürfnissen der Gruppe soll mindestens ein weiteres Thema vertieft werden: Netzwerke, digitale Medien, User Experience, Sicherheit, Datenanalyse oder -visualisierung, Hardware, ein Bereich aus der theoretischen Informatik… Ihre Vorschläge sind willkommen.</p>
+                    <p>Das Ergänzungsfach Informatik ist praktisch, vielseitig, bietet verschiedene Wahlmöglichkeiten und richtet sich bewusst an ein breites Publikum. Haben Sie Freude am Experimentieren, Problemlösen oder analytischen Denken, arbeiten Sie gerne kreativ, sind sprachlich interessiert, wollen schon lange wissen, was hinter Webseiten und Apps steckt oder haben Sie eine ganz konkrete Vorstellung eines Tools, das Sie gerne selbst entwickeln möchten? Vorwissen benötigen Sie keines. Falls Sie bereits Programmiererfahrung mitbringen, werden Sie diese ausbauen und Ihre persönlichen Schwerpunkte setzen können.</p>
+                </details>
+            </section>
+			<p>Wenn Sie unsicher sind, ob das Ergänzungsfach Informatik das Richtige für Sie ist, kontaktieren Sie mich</a>.</p> 
         </div>
 
         <!-- CONTACT -->
         <div id="contact-content" class="invisible">
-            <h1>Weitere Informationen</h1>
+            <section class="pageTitle">
+                <h1>Weitere Informationen</h1>
+            </section>
 
             <section class="mainContainer">
-                <p>Sind Sie unsicher, ob das Ergänzungsfach Informatik das Richtige für Sie ist?</p> 
-                <p>Haben Sie Fragen oder spezifische Wünsche?</p>
-                <p>Schreiben Sie mir per Teams oder senden Sie mir eine E-Mail.</p>
+			<p>Sind Sie unsicher, ob das Ergänzungsfach Informatik das Richtige für Sie ist, haben Sie Fragen oder Wünsche?</p>
+                <p>Schreiben Sie mir eine E-Mail.</p>
+            </section>
+        </div> 
+        
+        <!-- Example: Pong -->
+        <div id="pong-content" class="invisible">
+
+            <section>
+                <h1>Pong</h1>
+            </section>
+            
+            <section class="pong">
+                
+                <div class="hidden-xs">
+                    <iframe src="https://scratch.mit.edu/projects/637964656/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen ></iframe>
+                </div>
+                <div class="xs-only">
+                    <a href="https://scratch.mit.edu/projects/637964656" target="_blank">Verwenden Sie diesen Link, wenn Sie das Spiel auf dem Mobiltelefon nicht verwenden können.</a>
+                </div>
             </section>
         </div>
-
-        <!-- Example: Scratch-Projekte -->
-        <div id="scratchgames-content" class="invisible">
-            <h1>Games mit Scratch</h1>
-            <div id="scratch-projects">
-                <div class="xs-only">
-                    <a href="https://scratch.mit.edu/studios/31972117" target="_blank">
-                        Verwenden Sie für Ihr Smartphone diesen Link.</a>
-                </div>
-
-                <!-- <section class="scratch-projects"> -->
-                <div class="scratch-project hidden-xs">
-                    <h2>Pong</h2>
-                    <iframe src="https://scratch.mit.edu/projects/637964656/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>Slime-Killer</h2>
-                    <iframe src="https://scratch.mit.edu/projects/739096976/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>Klavierspielen mit Entchen</h2>
-                    <iframe src="https://scratch.mit.edu/projects/736979132/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>Penaltytraining</h2>
-                    <iframe src="https://scratch.mit.edu/projects/726346330/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>ZOMBIE ATTACK</h2>
-                    <iframe src="https://scratch.mit.edu/projects/728672334/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>Fisch-Spiel</h2>
-                    <iframe src="https://scratch.mit.edu/projects/739338658/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>Maze Run</h2>
-                    <iframe src="https://scratch.mit.edu/projects/724210810/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-
-                <div class="scratch-project hidden-xs">
-                    <h2>Castle Wars</h2>
-                    <iframe src="https://scratch.mit.edu/projects/728668815/embed" allowtransparency="true" width="485"
-                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
         <!-- Example: To Do List -->
         <div id="todo-content" class="invisible">
 
-            <h1>TO-DOs</h1>
-            <div class="mainContainer">
+            <section class="pageTitle">
+                <h1>TO-DOs</h1>
+            </section>
+    
+            <section class="mainContainer">
                 <form>
                     <input type="text" placeholder="Aufgabe">
                     <button type="submit">➕</button>
                 </form>
-
+    
                 <div class="todoList">
                     <ul class="todo-ul">
                     </ul>
                     <a class="clearList" id="clearList">Liste Löschen</a>
                 </div>
-            </div>
+            </section>
 
         </div>
 
         <!-- Example: Memory Game -->
         <div id="memory-content" class="invisible">
-            <h1>Memory</h1>
-
-            <div class="memory-game">
+            <section>
+                <h1>Memory</h1>
+            </section>
+            
+            
+            <section class="memory-game">
                 <div class="memory-card" data-framework="headphones">
-                    <div class="front-face">🎧</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">🎧</div>
+                <!--img class="front-face" src="./beispiele/img/aurelia.svg" alt="Aurelia" /-->
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
                 <div class="memory-card" data-framework="headphones">
-                    <div class="front-face">🎧</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">🎧</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
-
+            
                 <div class="memory-card" data-framework="coder">
-                    <div class="front-face">🧑‍💻</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">🧑‍💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
                 <div class="memory-card" data-framework="coder">
-                    <div class="front-face">🧑‍💻</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">🧑‍💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
-
+            
                 <div class="memory-card" data-framework="laptop">
-                    <div class="front-face">💻</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
                 <div class="memory-card" data-framework="laptop">
-                    <div class="front-face">💻</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">💻</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
-
+            
                 <div class="memory-card" data-framework="printer">
-                    <div class="front-face">🖨</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">🖨</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
                 <div class="memory-card" data-framework="printer">
-                    <div class="front-face">🖨</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">🖨</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
-
+            
                 <div class="memory-card" data-framework="pixelmonster">
-                    <div class="front-face">👾</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">👾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
                 <div class="memory-card" data-framework="pixelmonster">
-                    <div class="front-face">👾</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">👾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
-
+            
                 <div class="memory-card" data-framework="floppy">
-                    <div class="front-face">💾</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">💾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
                 <div class="memory-card" data-framework="floppy">
-                    <div class="front-face">💾</div>
-                    <img class="back-face" src="./assets/img/logo-kwi.png" alt="Logo KWI" />
+                <div class="front-face">💾</div>
+                <img class="back-face" src="./beispiele/img/logo-kwi.png" alt="Logo KWI" />
                 </div>
-            </div>
+            </section>
         </div>
 
         <!-- Example: Learning Cards -->
-        <div id="learningcards-content" class="invisible">
-            <h1>The English Irregular Verb Form Machine</h1>
-
-
-            <div class="learningcards">
-                <div id="congrats-container" class="invisible">
-                    <div class="congrats-emoji">🎉</div>
-                    <h2>Congratulations!</h2>
-                    <div class="congrats-text">You really know your irregular verbs!</div>
-                </div>
-                <div id="main-container">
-                    <div class="input-container">
-                        <div class="input-element input-element-1">
-                            <div class="description">Infinitive</div>
-                            <input type="text" id="infinitive">
+            <div id="learningcards-content" class="invisible">
+                <section>
+                    <h1>The English Irregular Verb Form Machine</h1>
+                </section>
+                    
+                    
+                <section class="learningcards">                
+                    <!-- <div id="congrats-text" class="invisible"></div> -->
+                    <div id="congrats-container" class="invisible">
+                        <div class="congrats-emoji">🎉</div>
+                        <h2>Congratulations!</h2>
+                        <div class="congrats-text">You really know your irregular verbs!</div>
+                    </div>
+                    <div id="main-container">
+                        <div class="input-container">
+                            <div class="input-element input-element-1">
+                                <div class="description">Infinitive</div>
+                                <input type="text" id="infinitive">
+                            </div>
+                            <div class="input-element input-element-2">
+                                <div class="description">Simple Past</div>
+                                <input type="text" id="simplePast">
+                            </div>
+                            <div class="input-element input-element-3">
+                                <div class="description">Past Participle</div>
+                                <input type="text" id="pastParticiple">
+                            </div>
+                            <div class="input-element input-element-4">
+                                <div class="description">German Translation</div>
+                                <input class="hidden-xs" type="text" id="germanTranslation">
+                                <textarea class="xs-only" id="germanTranslation2" rows="2"></textarea>
+                            </div>
                         </div>
-                        <div class="input-element input-element-2">
-                            <div class="description">Simple Past</div>
-                            <input type="text" id="simplePast">
+                        <div class="buttons">
+                            <button id="resolveButton" onclick="showVerb()">Show Solution</button>
+                            <button id="nextButton" onclick="askNewVerb()">Next</button>
+                            <button id="deleteButton" onclick="deleteVerb()">Delete</button>
                         </div>
-                        <div class="input-element input-element-3">
-                            <div class="description">Past Participle</div>
-                            <input type="text" id="pastParticiple">
-                        </div>
-                        <div class="input-element input-element-4">
-                            <div class="description">German Translation</div>
-                            <input class="hidden-xs" type="text" id="germanTranslation">
-                            <textarea class="xs-only" id="germanTranslation2" rows="2"></textarea>
+                        <div class="explanation-container">
+                            <button type="button" class="collapsible" onclick="toggleCollapsible()">Show Explanations</button>
+                            <div class="content">
+                                <p>The English Irregular Verb Form Machine</p>
+                                <p>allows you to practise your English irregular verb forms
+                                    by showing you either one of the three verb forms, infinitive, simple past, or past
+                                    participle,
+                                    or the German translation.</p>
+                                <p>The verbs and forms that are displayed are chosen randomly.</p>
+                                <p>At each reload, the list contains the whole set of verbs.</p>
+                                <p>
+                                    <button type="button" disabled>Show Solution</button> reveals the solution.<br />
+                                    You don't need to write your answers in the fields. You can, though, but your answers won't
+                                    be
+                                    evaluated. However, if you write your solution in the fields and then click on the Show
+                                    Solution button, you can see that your answers were correct if the field entries remain
+                                    unchanged.
+                                </p>
+                                <p>
+                                    <button type="button" disabled>Next</button> lets you jump to the next verb.<br />
+                                    The current verb remains in the list and will show up again.
+                                </p>
+                                <p>
+                                    <button type="button" disabled>Delete</button> lets you delete the verbs you know well
+                                    enough.
+                                    Deleted verbs won't show up anymore (as long as you don't reload the page).
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="buttons">
-                        <button id="resolveButton" onclick="showVerb()">Show Solution</button>
-                        <button id="nextButton" onclick="askNewVerb()">Next</button>
-                        <button id="deleteButton" onclick="deleteVerb()">Delete</button>
-                    </div>
-                    <div class="explanation-container">
-                        <button type="button" class="collapsible" onclick="toggleCollapsible()">Show
-                            Explanations</button>
-                        <div class="content">
-                            <p>The English Irregular Verb Form Machine</p>
-                            <p>allows you to practise your English irregular verb forms
-                                by showing you either one of the three verb forms, infinitive, simple past, or past
-                                participle,
-                                or the German translation.</p>
-                            <p>The verbs and forms that are displayed are chosen randomly.</p>
-                            <p>At each reload, the list contains the whole set of verbs.</p>
-                            <p>
-                                <button type="button" disabled>Show Solution</button> reveals the solution.<br />
-                                You don't need to write your answers in the fields. You can, though, but your answers
-                                won't
-                                be
-                                evaluated. However, if you write your solution in the fields and then click on the Show
-                                Solution button, you can see that your answers were correct if the field entries remain
-                                unchanged.
-                            </p>
-                            <p>
-                                <button type="button" disabled>Next</button> lets you jump to the next verb.<br />
-                                The current verb remains in the list and will show up again.
-                            </p>
-                            <p>
-                                <button type="button" disabled>Delete</button> lets you delete the verbs you know well
-                                enough.
-                                Deleted verbs won't show up anymore (as long as you don't reload the page).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
 
         <!-- Example: Bin Hex, Bit & Byte -->
         <div id="binhex-content" class="invisible">
-            <h1>Zahlensysteme</h1>
+            <section>
+                <h1>Zahlensysteme</h1>
+            </section>
+                
+                
+            <section class="binhex">                
+            <p>Im Gegensatz zum uns geläufigen Dezimalsystem (Zehnersystem), in dem wir die Ziffern 0 bis 9 zur Verfügung haben, verwendet das Binärsystem lediglich zwei Ziffern, die 0 und die 1.</p>
+            <p>Die Stellenwerte einer Dezimalzahl bilden sich aus Zehnerpotenzen.</p>
+            
+            <div class="beispiel">
+            <h4>Beispiel</h4>
+            <p> Die Zahl 3'476'025<sub>10</sub> setzt sich folgendermassen zusammen:</p>
+            
+            <table>
+                <tr>
+                <th>1'000'000-er</th>
+                <th>100'000-er</th>
+                <th>10'000-er</th>
+                <th>1'000-er</th>
+                <th>100-er</th>
+                <th>10-er</th>
+                <th>1-er</th>
+                </tr>
+                <tr>
+                <td>10<sup>6</sup></td>
+                <td>10<sup>5</sup></td>
+                <td>10<sup>4</sup></td>
+                <td>10<sup>3</sup></td>
+                <td>10<sup>2</sup></td>
+                <td>10<sup>1</sup></td>
+                <td>10<sup>0</sup></td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>7</td>
+                <td>6</td>
+                <td>0</td>
+                <td>2</td>
+                <td>5</td>
+                </tr>
+            </table>
 
-            <div class="binhex">
-                <p>Im Gegensatz zum uns geläufigen Dezimalsystem (Zehnersystem), in dem wir die Ziffern 0 bis 9 zur
-                    Verfügung haben, verwendet das Binärsystem lediglich zwei Ziffern, die 0 und die 1.</p>
-                <p>Die Stellenwerte einer Dezimalzahl bilden sich aus Zehnerpotenzen.</p>
-
-                <div class="beispiel">
-                    <h4>Beispiel</h4>
-                    <p> Die Zahl 3'476'025<sub>10</sub> setzt sich folgendermassen zusammen:</p>
-
-                    <table>
-                        <tr>
-                            <th>1'000'000-er</th>
-                            <th>100'000-er</th>
-                            <th>10'000-er</th>
-                            <th>1'000-er</th>
-                            <th>100-er</th>
-                            <th>10-er</th>
-                            <th>1-er</th>
-                        </tr>
-                        <tr>
-                            <td>10<sup>6</sup></td>
-                            <td>10<sup>5</sup></td>
-                            <td>10<sup>4</sup></td>
-                            <td>10<sup>3</sup></td>
-                            <td>10<sup>2</sup></td>
-                            <td>10<sup>1</sup></td>
-                            <td>10<sup>0</sup></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>7</td>
-                            <td>6</td>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>5</td>
-                        </tr>
-                    </table>
-
-                </div>
-
-                <h2>Binärzahlen</h2>
-                <p>
-                    Das Binärsystem ist analog aufgebaut, nur gibt es anstelle der zehn Ziffern nur deren zwei (0 und
-                    1), weshalb die Stellenwerte Zweierpotenzen entsprechen:
-                </p>
-
-                <div class="beispiel">
-                    <h4>Beispiel</h4>
-                    <p> Die Zahl 10101011<sub>2</sub> setzt sich folgendermassen zusammen:</p>
-
-                    <table>
-                        <tr>
-                            <th>128-er</th>
-                            <th>64-er</th>
-                            <th>32-er</th>
-                            <th>16-er</th>
-                            <th>8-er</th>
-                            <th>4-er</th>
-                            <th>2-er</th>
-                            <th>1-er</th>
-                        </tr>
-                        <tr>
-                            <td>2<sup>7</sup></td>
-                            <td>2<sup>6</sup></td>
-                            <td>2<sup>5</sup></td>
-                            <td>2<sup>4</sup></td>
-                            <td>2<sup>3</sup></td>
-                            <td>2<sup>2</sup></td>
-                            <td>2<sup>1</sup></td>
-                            <td>2<sup>0</sup></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <h3>Bit und Byte</h3>
-                <p>Eine Dezimalstelle entspricht einem Bit, der kleinsten Informationseinheit. Sie kann die beiden Werte
-                    0 und 1 annehmen. Mit einem Bit können also zwei Werte dargestellt werden.</p>
-                <p>Um grössere Zahlen darzustellen, werden mehrere Bits verwendet. Eine Gruppe von <strong>8
-                        Bits</strong> nennt man <strong>Byte</strong>.</p>
-                <p>Mit einem Byte können 2<sup>8</sup> (also 256) Zahlen dargestellt werden: von 0000 0000<sub>2</sub>
-                    bis 1111 1111<sub>2</sub> (255<sub>10</sub>).</p>
-
-                <h2>Hexadezimalzahlen</h2>
-
-                <p>Daten werden binär gespeichert und verarbeitet, aber oft werden sie hexadezimal repräsentiert.</p>
-                <p>Das Hexadezimalsystem verwendet 16 Ziffern – das sind mehr als das uns geläufige Dezimalsystem
-                    verwendet. Da uns nur die Ziffern von 0 bis 9 zur Verfügung stehen, verwenden wir für 10 bis 15 die
-                    Buchstaben <strong>A</strong> (für 10) bis <strong>F</strong> (für 15). Somit haben wir die nötigen
-                    16 Ziffern von 0 bis F.</p>
-
-                <p>Zur binären Darstellung der Zahlen 0 bis 15 sind vier Stellen nötig. Die Umwandlung einer Binärzahl
-                    in eine Hexadezimalzahl ist dadurch sehr einfach: Je 4 Bits zusammen entsprechen einer
-                    Hexadezimalstelle.</p>
-
-                <div class="beispiel">
-                    <h4>Beispiel</h4>
-                    <p> Die Zahl 1100 0011 0101 0100 1011 1101 1010<sub>2</sub> setzt sich folgendermassen zusammen:</p>
-                    <table class="hex-table">
-                        <tr>
-                            <th>16'777'216-er</th>
-                            <th>1'058'576-er</th>
-                            <th>65'536-er</th>
-                            <th>4'096-er</th>
-                            <th>256-er</th>
-                            <th>16-er</th>
-                            <th>1-er</th>
-                        </tr>
-                        <tr>
-                            <td>16<sup>6</sup></td>
-                            <td>16<sup>5</sup></td>
-                            <td>16<sup>4</sup></td>
-                            <td>16<sup>3</sup></td>
-                            <td>16<sup>2</sup></td>
-                            <td>16<sup>1</sup></td>
-                            <td>16<sup>0</sup></td>
-                        </tr>
-                        <tr>
-                            <td>1100 </td>
-                            <td>0011</td>
-                            <td>0101</td>
-                            <td>0100</td>
-                            <td>1011</td>
-                            <td>1101</td>
-                            <td>1010</td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>B</td>
-                            <td>D</td>
-                            <td>A</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <h3>Probieren Sie's aus!</h3>
-                <p>Klicken Sie die runden Stellen der Binärzahl an, um die Bits zu aktivieren.</p>
-
-                <div id="calculator">
-                    <table id="calculator-table">
-                        <tr>
-                            <th>128-er</th>
-                            <th>64-er</th>
-                            <th>32-er</th>
-                            <th>16-er</th>
-                            <th>8-er</th>
-                            <th>4-er</th>
-                            <th>2-er</th>
-                            <th>1-er</th>
-                        </tr>
-                        <tr>
-                            <td>2<sup>7</sup></td>
-                            <td>2<sup>6</sup></td>
-                            <td>2<sup>5</sup></td>
-                            <td>2<sup>4</sup></td>
-                            <td>2<sup>3</sup></td>
-                            <td>2<sup>2</sup></td>
-                            <td>2<sup>1</sup></td>
-                            <td>2<sup>0</sup></td>
-                        </tr>
-                        <tr>
-                            <td><button id="bit7" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit6" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit5" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit4" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit3" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit2" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit1" onclick="updateNumber(this.id)">0</button></td>
-                            <td><button id="bit0" onclick="updateNumber(this.id)">0</button></td>
-                        </tr>
-                        <tr>
-                            <td id="digit7">0</td>
-                            <td id="digit6">0</td>
-                            <td id="digit5">0</td>
-                            <td id="digit4">0</td>
-                            <td id="digit3">0</td>
-                            <td id="digit2">0</td>
-                            <td id="digit1">0</td>
-                            <td id="digit0">0</td>
-                        </tr>
-                    </table>
-
-                    <table class="hex-table">
-                        <tr>
-                            <th>16-er</th>
-                            <th>1-er</th>
-                        </tr>
-                        <tr>
-                            <td>16<sup>1</sup></td>
-                            <td>16<sup>0</sup></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span id="binBit7">0</span> <span id="binBit6">0</span> <span id="binBit5">0</span>
-                                <span id="binBit4">0</span>
-                            </td>
-                            <td>
-                                <span id="binBit3">0</span> <span id="binBit2">0</span> <span id="binBit1">0</span>
-                                <span id="binBit0">0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="hex1">0</td>
-                            <td id="hex0">0</td>
-                        </tr>
-                    </table>
-
-                    <div class="overview">
-                        <dl>
-                            <dt>Binär</dt>
-                            <dd id="binaryNumber">00000000</dd>
-                            <dt>Dezimal</dt>
-                            <dd id="decimalNumber">0</dd>
-                            <dt>Hexadezimal</dt>
-                            <dd id="hexNumber">00</dd>
-                    </div>
-                </div>
-
-                <div class="aufgabe">
-                    <h3>Überprüfen Sie Ihr Verständnis</h3>
-                    Beantworten Sie die Fragen in die Eingabefelder und klicken Sie zum Korrigieren jeweils auf Sherlock
-                    🧐.
-                    <ul>
-                        <li>Wie viele Bits hat ein Byte?
-                            <input type="text" id="bytesize" name="lname">
-                            <span class="emoji"
-                                onclick="document.getElementById('bytesize').value==8?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
-                        </li>
-                        <li>Welches ist die <em>kleinste</em> Dezimalzahl, die mit einem Byte dargestellt werden kann?
-                            <input type="text" id="bytesize_min" name="lname">
-                            <span class="emoji"
-                                onclick="document.getElementById('bytesize_min').value==0?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
-                        </li>
-                        <li>Welches ist die <em>grösste</em> Dezimalzahl, die mit einem Byte dargestellt werden kann?
-                            <input type="text" id="bytesize_max" name="lname">
-                            <span class="emoji"
-                                onclick="document.getElementById('bytesize_max').value==255?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
-                        </li>
-                        <li>Welches ist die <em>grösste</em> Hexadezimalzahl, die mit einem Byte dargestellt werden
-                            kann?
-                            <input type="text" id="bytesize_max_hex" name="lname">
-                            <span class="emoji"
-                                onclick="['FF','#FF','ff','#ff'].includes(document.getElementById('bytesize_max_hex').value) ?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </div>
+            
+            <h2>Binärzahlen</h2>
+            <p>
+            Das Binärsystem ist analog aufgebaut, nur gibt es anstelle der zehn Ziffern nur deren zwei (0 und 1), weshalb die Stellenwerte Zweierpotenzen entsprechen:
+            </p>
 
-        <div id="scratch-projects-content" class="invisible">
-            <h1>Erste-Projekte vom aktuellen EF</h1>
-            <div class="learningcards">
-                <div id="congrats-container" class="invisible">
-                    <div class="congrats-emoji">🎉</div>
-                    <h2>Congratulations!</h2>
-                    <div class="congrats-text">You really know your irregular verbs!</div>
-                </div>
-                <div id="main-container">
-                    <div class="input-container">
-                        <div class="input-element input-element-1">
-                            <div class="description">Infinitive</div>
-                            <input type="text" id="infinitive">
-                        </div>
-                        <div class="input-element input-element-2">
-                            <div class="description">Simple Past</div>
-                            <input type="text" id="simplePast">
-                        </div>
-                        <div class="input-element input-element-3">
-                            <div class="description">Past Participle</div>
-                            <input type="text" id="pastParticiple">
-                        </div>
-                        <div class="input-element input-element-4">
-                            <div class="description">German Translation</div>
-                            <input class="hidden-xs" type="text" id="germanTranslation">
-                            <textarea class="xs-only" id="germanTranslation2" rows="2"></textarea>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button id="resolveButton" onclick="showVerb()">Show Solution</button>
-                        <button id="nextButton" onclick="askNewVerb()">Next</button>
-                        <button id="deleteButton" onclick="deleteVerb()">Delete</button>
-                    </div>
-                    <div class="explanation-container">
-                        <button type="button" class="collapsible" onclick="toggleCollapsible()">Show
-                            Explanations</button>
-                        <div class="content">
-                            <p>The English Irregular Verb Form Machine</p>
-                            <p>allows you to practise your English irregular verb forms
-                                by showing you either one of the three verb forms, infinitive, simple past, or past
-                                participle,
-                                or the German translation.</p>
-                            <p>The verbs and forms that are displayed are chosen randomly.</p>
-                            <p>At each reload, the list contains the whole set of verbs.</p>
-                            <p>
-                                <button type="button" disabled>Show Solution</button> reveals the solution.<br />
-                                You don't need to write your answers in the fields. You can, though, but your answers
-                                won't
-                                be
-                                evaluated. However, if you write your solution in the fields and then click on the Show
-                                Solution button, you can see that your answers were correct if the field entries remain
-                                unchanged.
-                            </p>
-                            <p>
-                                <button type="button" disabled>Next</button> lets you jump to the next verb.<br />
-                                The current verb remains in the list and will show up again.
-                            </p>
-                            <p>
-                                <button type="button" disabled>Delete</button> lets you delete the verbs you know well
-                                enough.
-                                Deleted verbs won't show up anymore (as long as you don't reload the page).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    </section>
+            <div class="beispiel">
+            <h4>Beispiel</h4>
+            <p> Die Zahl 10101011<sub>2</sub> setzt sich folgendermassen zusammen:</p>
+
+            <table>
+                <tr>
+                <th>128-er</th>
+                <th>64-er</th>
+                <th>32-er</th>
+                <th>16-er</th>
+                <th>8-er</th>
+                <th>4-er</th>
+                <th>2-er</th>
+                <th>1-er</th>
+                </tr>
+                <tr>
+                <td>2<sup>7</sup></td>
+                <td>2<sup>6</sup></td>
+                <td>2<sup>5</sup></td>
+                <td>2<sup>4</sup></td>
+                <td>2<sup>3</sup></td>
+                <td>2<sup>2</sup></td>
+                <td>2<sup>1</sup></td>
+                <td>2<sup>0</sup></td>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                </tr>
+            </table>
+            </div>
+
+            <h3>Bit und Byte</h3>
+            <p>Eine Dezimalstelle entspricht einem Bit, der kleinsten Informationseinheit. Sie kann die beiden Werte 0 und 1 annehmen. Mit einem Bit können also zwei Werte dargestellt werden.</p>
+            <p>Um grössere Zahlen darzustellen, werden mehrere Bits verwendet. Eine Gruppe von <strong>8 Bits</strong> nennt man <strong>Byte</strong>.</p> 
+            <p>Mit einem Byte können 2<sup>8</sup> (also 256) Zahlen dargestellt werden: von 0000 0000<sub>2</sub> bis 1111 1111<sub>2</sub> (255<sub>10</sub>).</p>
+
+            <h2>Hexadezimalzahlen</h2>
+
+            <p>Daten werden binär gespeichert und verarbeitet, aber oft werden sie hexadezimal repräsentiert.</p> 
+            <p>Das Hexadezimalsystem verwendet 16 Ziffern – das sind mehr als das uns geläufige Dezimalsystem verwendet. Da uns nur die Ziffern von 0 bis 9 zur Verfügung stehen, verwenden wir für 10 bis 15 die Buchstaben <strong>A</strong> (für 10) bis <strong>F</strong> (für 15). Somit haben wir die nötigen 16 Ziffern von 0 bis F.</p>
+
+            <p>Zur binären Darstellung der Zahlen 0 bis 15 sind vier Stellen nötig. Die Umwandlung einer Binärzahl in eine Hexadezimalzahl ist dadurch sehr einfach: Je 4 Bits zusammen entsprechen einer Hexadezimalstelle.</p>
+            
+            <div class="beispiel">
+            <h4>Beispiel</h4>
+            <p> Die Zahl 1100 0011 0101 0100 1011 1101 1010<sub>2</sub> setzt sich folgendermassen zusammen:</p>
+            <table class="hex-table">
+                <tr>
+                <th>16'777'216-er</th>
+                <th>1'058'576-er</th>
+                <th>65'536-er</th>
+                <th>4'096-er</th>
+                <th>256-er</th>
+                <th>16-er</th>
+                <th>1-er</th>
+                </tr>
+                <tr>
+                <td>16<sup>6</sup></td>
+                <td>16<sup>5</sup></td>
+                <td>16<sup>4</sup></td>
+                <td>16<sup>3</sup></td>
+                <td>16<sup>2</sup></td>
+                <td>16<sup>1</sup></td>
+                <td>16<sup>0</sup></td>
+                </tr>
+                <tr>
+                <td>1100 </td>
+                <td>0011</td>
+                <td>0101</td>
+                <td>0100</td>
+                <td>1011</td>
+                <td>1101</td>
+                <td>1010</td>
+                </tr>
+                <tr>
+                <td>C</td>
+                <td>3</td>
+                <td>5</td>
+                <td>4</td>
+                <td>B</td>
+                <td>D</td>
+                <td>A</td>
+                </tr>
+            </table>
+            </div>
+
+            <h3>Probieren Sie's aus!</h3>
+            <p>Klicken Sie die runden Stellen der Binärzahl an, um die Bits zu aktivieren.</p>
+            
+            <div id="calculator">
+            <table id="calculator-table">
+                <tr>
+                <th>128-er</th>
+                <th>64-er</th>
+                <th>32-er</th>
+                <th>16-er</th>
+                <th>8-er</th>
+                <th>4-er</th>
+                <th>2-er</th>
+                <th>1-er</th>
+                </tr>
+                <tr>
+                <td>2<sup>7</sup></td>
+                <td>2<sup>6</sup></td>
+                <td>2<sup>5</sup></td>
+                <td>2<sup>4</sup></td>
+                <td>2<sup>3</sup></td>
+                <td>2<sup>2</sup></td>
+                <td>2<sup>1</sup></td>
+                <td>2<sup>0</sup></td>
+                </tr>
+                <tr>
+                <td><button id="bit7" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit6" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit5" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit4" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit3" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit2" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit1" onclick="updateNumber(this.id)">0</button></td>
+                <td><button id="bit0" onclick="updateNumber(this.id)">0</button></td>
+                </tr>
+                <tr>
+                <td id="digit7">0</td>
+                <td id="digit6">0</td>
+                <td id="digit5">0</td>
+                <td id="digit4">0</td>
+                <td id="digit3">0</td>
+                <td id="digit2">0</td>
+                <td id="digit1">0</td>
+                <td id="digit0">0</td>
+                </tr>
+            </table>
+
+            <table class="hex-table">
+                <tr>
+                <th>16-er</th>
+                <th>1-er</th>
+                </tr>
+                <tr>
+                <td>16<sup>1</sup></td>
+                <td>16<sup>0</sup></td>
+                </tr>
+                <tr>
+                <td>
+                    <span id="binBit7">0</span> <span id="binBit6">0</span> <span id="binBit5">0</span> <span id="binBit4">0</span>
+                </td>
+                <td>
+                    <span id="binBit3">0</span> <span id="binBit2">0</span> <span id="binBit1">0</span> <span id="binBit0">0</span>
+                </td>
+                </tr>
+                <tr>
+                <td id="hex1">0</td>
+                <td id="hex0">0</td>
+                </tr>
+            </table>
+
+            <div class="overview">
+                <dl>
+                <dt>Binär</dt>
+                <dd id="binaryNumber">00000000</dd>
+                <dt>Dezimal</dt>
+                <dd id="decimalNumber">0</dd>
+                <dt>Hexadezimal</dt>
+                <dd id="hexNumber">00</dd>
+            </div>
+            </div>
+            
+            <div class="aufgabe">
+            <h3>Überprüfen Sie Ihr Verständnis</h3>
+            Beantworten Sie die Fragen in die Eingabefelder und klicken Sie zum Korrigieren jeweils auf Sherlock 🧐.
+            <ul>
+                <li>Wie viele Bits hat ein Byte?
+                <input type="text" id="bytesize" name="lname">
+                <span class="emoji" onclick="document.getElementById('bytesize').value==8?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+                </li>
+                <li>Welches ist die <em>kleinste</em> Dezimalzahl, die mit einem Byte dargestellt werden kann?
+                <input type="text" id="bytesize_min" name="lname">
+                <span class="emoji" onclick="document.getElementById('bytesize_min').value==0?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+                </li>
+                <li>Welches ist die <em>grösste</em> Dezimalzahl, die mit einem Byte dargestellt werden kann?
+                <input type="text" id="bytesize_max" name="lname">
+                <span class="emoji" onclick="document.getElementById('bytesize_max').value==255?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+                </li>
+                <li>Welches ist die <em>grösste</em> Hexadezimalzahl, die mit einem Byte dargestellt werden kann?
+                <input type="text" id="bytesize_max_hex" name="lname">
+                <span class="emoji" onclick="['FF','#FF','ff','#ff'].includes(document.getElementById('bytesize_max_hex').value) ?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+                </li>
+            </ul>
+            </div>
+        </section>
     </div>
 
     </div>
 
-    <script type="text/javascript" , src="./scripts/script.js"></script>
-    <script type="text/javascript" , src="./scripts/todo.js"></script>
-    <script type="text/javascript" , src="./scripts/memory.js"></script>
-    <script type="text/javascript" , src="./scripts/irregular-verbs.js"></script>
-    <script type="text/javascript" , src="./scripts/bin-hex.js"></script>
+    <script type="text/javascript", src="script.js"></script>
+    <script type="text/javascript", src="./beispiele/todo.js"></script>
+    <script type="text/javascript", src="./beispiele/memory.js"></script>
+    <script type="text/javascript", src="./beispiele/irregular-verbs.js"></script>
+    <script type="text/javascript", src="./beispiele/bin-hex.js"></script>
 </body>
-
 </html>
