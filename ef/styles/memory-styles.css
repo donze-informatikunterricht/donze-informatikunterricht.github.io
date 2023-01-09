@@ -1,9 +1,5 @@
 #memory-content {
   height: 100vh;
-  padding: 0;
-  padding-bottom: 10%;
-  margin: 0;
-  background: #000066;
   background-image: linear-gradient(0deg, #c3c3c3, #000066);
 }
 
@@ -13,13 +9,12 @@
   font-family: 'Press Start 2P';
 }
 
-.memory-game {
+#memory-game {
   width: 80%;
   height: 60%;
   margin: auto; /* vertically and horizontally center in the flexbox */
   display: flex;
   flex-wrap: wrap;
-  perspective: 1000px;
 }
 
 .memory-card {
@@ -43,13 +38,11 @@
   transition: transform .2s;
 }
 
-.memory-card.flip {
+.memory-card.flipped {
   transform: rotateY(180deg);
 }
 
 .front-face, .back-face {
-
-  padding: 20%;
   position: absolute;
   border-radius: 5px;
   background: #1c7ccc;
@@ -64,14 +57,31 @@
 	height: 100%;
 }
 
+.back-face {
+  background-position: center;
+  background-image: url(../assets/img/logo-kwi.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
 .front-face {
-  font-size: 10vw;
+  font-size: 10vw; /* depending on viewport width */
   text-align: center;
   transform: rotateY(180deg);
 }
 
 @media (min-width: 576px) {
-  .memory-game {
+  #memory-game {
     height: 80%;
+  }
+
+  .front-face {
+    font-size: 15vh; /* depending on viewport height */
+  }
+}
+
+@media (min-width: 1200px) {
+  #memory-game {
+    width: 1200px;
   }
 }
