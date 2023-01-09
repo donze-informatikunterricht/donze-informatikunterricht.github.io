@@ -1,4 +1,4 @@
-* {
+body * {
   font-family: 'Palanquin', sans-serif;
   box-sizing: border-box;
 }
@@ -12,13 +12,13 @@ html {
   font-size: small;
 }
 
-.contentContainer {
+section {
   width: 100%;
   margin: auto;
   height: fit-content;
 }
 
-#home-content, #contact-content {
+#home-content {
   padding: 0 5%;
 }
 
@@ -41,7 +41,6 @@ li.nav {
   float: left;
 }
 
-
 li.nav a, .dropbtn {
   display: inline-block;
   color: white;
@@ -50,7 +49,6 @@ li.nav a, .dropbtn {
   text-decoration: none;
 }
 
-
 li.nav a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
@@ -58,9 +56,9 @@ li.nav a:hover, .dropdown:hover .dropbtn {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #c3c3c3;
+  background-color: darkgray;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
 }
 
@@ -72,13 +70,9 @@ li.nav a:hover, .dropdown:hover .dropbtn {
   text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.dropdown-content li.nav a:hover {
+  background-color: pink;/*#f1f1f1;*/
 }
-
-/* .dropdown:hover .dropdown-content {
-  display: block;
-} */
 
 .dropdown.visible .dropdown-content {
   display: block;
@@ -86,6 +80,10 @@ li.nav a:hover, .dropdown:hover .dropbtn {
 
 ul.dropdown-content {
   list-style: none;
+}
+
+.nav .active {
+  font-weight: bold;
 }
 
 h1 {
@@ -100,6 +98,14 @@ details p{
   padding-left: 5%;
 }
 
+dl {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 0;
+}
+
 @media (min-width: 576px) {
   html {
     font-size: large;
@@ -111,7 +117,7 @@ details p{
     font-weight: 800;
   }
 
-  #home-content, #contact-content {
+  #home-content, #binhex-content {
     padding: 0 10%;
   }
 

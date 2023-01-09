@@ -8,7 +8,6 @@ document.getElementById("todo").addEventListener("click", showContent);
 document.getElementById("memory").addEventListener("click", showContent);
 document.getElementById("learningcards").addEventListener("click", showContent);
 document.getElementById("binhex").addEventListener("click", showContent);
-document.getElementById("contact").addEventListener("click", showContent);
 
 document.getElementById("dropbtn").addEventListener("mouseover", handleMouseover);
 document.getElementById("dropbtn").addEventListener("mouseout", handleMouseout);
