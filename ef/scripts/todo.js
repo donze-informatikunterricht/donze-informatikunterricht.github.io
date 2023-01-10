@@ -36,12 +36,14 @@ function addTodo(todo) {
     let ulElement = document.getElementById('todo-ul');
     let liElement = document.createElement('li');
 
+    // replace special characters to avoid possible html injection:
+    let todoEscaped = todo.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') 
+
     liElement.innerHTML = `
-        <span class="todoItem">${todo}</span>
+        <span class="todoItem">${todoEscaped}</span>
         <button name="checkButton">✔️</button>
         <button name="deleteButton">🗑</button>
     `;
-    //liElement.classList.add('todo-li')
 
     liElement.classList.add('todo-list-item');
     ulElement.appendChild(liElement)
