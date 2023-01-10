@@ -1,19 +1,19 @@
 "use strict";
 
 // Selectors
-document.querySelector('form').addEventListener('submit', handleSubmitForm);
-document.querySelector('.todo-ul').addEventListener('click', handleButtonClickDeleteOrCheck);
-document.querySelector('.clearList').addEventListener('click', handleClearList);
+document.getElementById('todo-form').addEventListener('submit', handleSubmitForm);
+document.getElementById('todo-ul').addEventListener('click', handleButtonClickDeleteOrCheck);
+document.getElementById('clearList').addEventListener('click', handleClearList);
 
 // Event Handlers
 // takes: e: event object
 function handleSubmitForm(e) {
-    e.preventDefault(); // The browser's default handling of a form submit event
-    let input = document.querySelector('input');
-    if (input.value != '') {
-        addTodo(input.value);
+    e.preventDefault(); // Prevent browser's default handling of form submit event
+    let inputElement = document.getElementById('todo-input');
+    if (inputElement.value != '') {
+        addTodo(inputElement.value);
     }
-    input.value = '';
+    inputElement.value = '';
 }
 
 function handleButtonClickDeleteOrCheck(e) {
@@ -26,26 +26,25 @@ function handleButtonClickDeleteOrCheck(e) {
     }
 }
 
-function handleClearList(e) {
-    console.log("Here I am, this is me, there's nowhere in the world I'd rather be...")
-    let ul = document.querySelector('.todo-ul');
-    ul.innerHTML = '';
+function handleClearList() {
+    let ulElement = document.getElementById('todo-ul');
+    ulElement.innerHTML = '';
 }
 
 // Helper Functions
 function addTodo(todo) {
-    let ul = document.querySelector('.todo-ul');
-    let li = document.createElement('li');
+    let ulElement = document.getElementById('todo-ul');
+    let liElement = document.createElement('li');
 
-    li.innerHTML = `
+    liElement.innerHTML = `
         <span class="todoItem">${todo}</span>
         <button name="checkButton">✔️</button>
         <button name="deleteButton">🗑</button>
     `;
-    //li.classList.add('todo-li')
+    //liElement.classList.add('todo-li')
 
-    li.classList.add('todo-list-item');
-    ul.appendChild(li)
+    liElement.classList.add('todo-list-item');
+    ulElement.appendChild(liElement)
 }
 
 function checkTodo(e) {

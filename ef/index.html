@@ -276,15 +276,15 @@
     <!-- Example: To Do List -->
     <section id="todo-content" class="invisible">
 
-        <h1>TO-DO-Liste</h1>
+        <h1>To-Do-Liste</h1>
         <div class="mainContainer">
-            <form>
-                <input type="text" placeholder="Aufgabe">
+            <form id="todo-form">
+                <input type="text" placeholder="Aufgabe (ohne spezielle Zeichen)" id="todo-input" pattern="^[a-zäöüA-ZÄÖÜ0-9.,:;!?/ ]+$">
                 <button type="submit">➕</button>
             </form>
 
-            <div class="todoList">
-                <ul class="todo-ul">
+            <div id="todo-list">
+                <ul id="todo-ul">
                 </ul>
                 <a class="clearList" id="clearList">Liste Löschen</a>
             </div>

@@ -55,7 +55,7 @@
     background-color: lightpink;
 }
 
-#todo-content .todoList {
+#todo-content #todo-list {
     background-color: lightpink;
     border-radius: 5px;
     margin-top: 20px;
