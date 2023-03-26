@@ -225,7 +225,7 @@
                     Dropdowns um die einzelnen Stellen mit Werten zu füllen. Achten Sie darauf, wieviele Ziffern jeweils
                     zur Verfügung stehen, d.h. welche Werte eine Stelle annehmen kann. Erkennen Sie eine Regel?</p>
                 <label for="n_choice">Basis: </label>
-                <input type="text" id="n_choice" name="number_choice">
+                <input type="number" id="n_choice" name="number_choice">
                 <button onclick="build_system()">wählen</button>
             </div>
 
@@ -258,7 +258,7 @@
                         kann?
                         <input type="text" id="bytesize_max_hex" name="lname">
                         <span class="emoji"
-                            onclick="['FF','#FF','ff', 'Ff', 'fF', '#ff'].includes(document.getElementById('bytesize_max_hex').value) ?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
+                            onclick="['FF','#FF','ff', '#ff', 'Ff', '#Ff', 'fF','#fF'].includes(document.getElementById('bytesize_max_hex').value) ?this.innerHTML='🙂':this.innerHTML='🙁'">🧐</span>
                     </li>
                     <li>Welche Ziffern stehen im 7-adischen System zur Verfügung?
                         <input type="number" id="digitsize_7adic_min" name="lname"> bis <input type="number"
