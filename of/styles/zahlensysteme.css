@@ -1,0 +1,79 @@
+#calculator-table button {
+    border: 1px solid black;
+    border-radius: 50%;
+    color: gray;
+    border-color: gray;
+    background-color: #c0c0c0;
+}
+
+#calculator-table .active {
+    text-align: center;
+    text-emphasis: bold;
+    color: purple;
+    border-color: purple;
+    background-color: lightpink;
+}
+
+#calculator-table td {
+    text-align: center;
+}
+
+#calculator-table .overview {
+    border: .5px solid purple;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: auto;
+}
+
+.beispiel table {
+    width: 100%;
+}
+.beispiel th, .beispiel td {
+    width: 12.5%; /* 1/8 of the available width */
+    text-align: center;
+}
+
+.beispiel th {
+    border-bottom: 2px solid black;
+}
+
+#calculator-table th {
+    width: 12.5%; /* 1/8 of the available width */
+}
+#calculator th, #calculator td {
+    text-align: center;
+}
+#binhex-content .beispiel {
+    background-color: lavender;
+    padding: 10px;
+}
+
+#binhex-content .aufgabe {
+    background-color: lavenderblush;
+    margin-top: 24px;
+    padding: 10px;
+    padding-top: 1px;
+}
+
+.aufgabe li .emoji {
+    font-size: xx-large;
+}
+
+.beispiel h4 {
+    color: purple;
+    margin-top: 0px;
+}
+
+#calculator {
+    border: 2px solid purple;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 576px) {
+    #calculator-table th {
+        width: 60px;
+    }
+}
