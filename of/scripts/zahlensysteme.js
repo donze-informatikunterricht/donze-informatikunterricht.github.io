@@ -306,6 +306,7 @@ function showConversion() {
     tableElement.appendChild(thirdRowElement);
 
     // Create the fourth row that will contain the number
+    let biggerDigits = ["A", "B", "C", "D", "E", "F"];
     let fourthRowElement = document.createElement("tr");
     let fourthRowTitleElement = document.createElement("th");
     fourthRowTitleElement.innerHTML = "Umgewandelte Zahl:";
@@ -314,7 +315,12 @@ function showConversion() {
     rest = decimalNumber;
     for (let stelle = exp-1; stelle >= 0; stelle--) {
         let thElement = document.createElement("th");
-        thElement.innerHTML = Math.floor(rest / (base**stelle));
+        let intPartOfDivision = Math.floor(rest / (base**stelle));
+        if (intPartOfDivision < 10) {
+            thElement.innerHTML = intPartOfDivision;
+        } else  {
+            thElement.innerHTML = biggerDigits[intPartOfDivision-10];
+        }
         rest = rest % (base**stelle)
         fourthRowElement.appendChild(thElement);
     }
