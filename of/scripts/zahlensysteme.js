@@ -55,7 +55,7 @@ function build_system() {
 
     let surroundingDivElement = document.getElementById("general_n_adic");
 
-    // remove content if existing
+    // Remove content if existing
     let existingElement = document.getElementById("n_adic_content");
     if (existingElement) {
         existingElement.remove();
@@ -70,7 +70,7 @@ function build_system() {
         return;
     }
 
-    // surrounding div element
+    // Create surrounding div element
     let contentDivElement = document.createElement("div");
     contentDivElement.id = "n_adic_content";
     surroundingDivElement.appendChild(contentDivElement);
@@ -118,33 +118,29 @@ function build_system() {
     for (let stelle = 7; stelle >= 0; stelle--) {
         let tdElement = document.createElement("td");
         tdElement.id = "stelle" + stelle;
-        // if (stelle < 7) {
-        //     tdElement.innerHTML = "+ 0";
-        // } else {
         tdElement.innerHTML = 0;
-        // }
         thirdRowElement.appendChild(tdElement);
     }
     tableElement.appendChild(thirdRowElement);
 
     let fourthRowElement = document.createElement("tr")
-    let fourthRowTitleElement = document.createElement("td");
+    let fourthRowTitleElement = document.createElement("th");
     fourthRowTitleElement.innerHTML = "Addition:";
     fourthRowElement.appendChild(fourthRowTitleElement);
     for (let stelle = 7; stelle >= 0; stelle--) {
-        let tdElement = document.createElement("td");
-        tdElement.id = "stelle_calc" + stelle;
+        let thElement = document.createElement("th");
+        thElement.id = "stelle_calc" + stelle;
         if (stelle < 7) {
-            tdElement.innerHTML = "+ 0";
+            thElement.innerHTML = "+ 0";
         } else {
-            tdElement.innerHTML = 0;
+            thElement.innerHTML = 0;
         }
-        fourthRowElement.appendChild(tdElement);
+        fourthRowElement.appendChild(thElement);
     }
-    let tdElement2 = document.createElement("td");
-    tdElement2.id = "corresponding_decimal";
-    tdElement2.innerHTML = "= 0";
-    fourthRowElement.appendChild(tdElement2);
+    let thElement2 = document.createElement("th");
+    thElement2.id = "corresponding_decimal";
+    thElement2.innerHTML = "= 0";
+    fourthRowElement.appendChild(thElement2);
     tableElement.appendChild(fourthRowElement);
 
     let fifthRowElement = document.createElement("tr")
@@ -220,3 +216,132 @@ function updateNadicNumber(e) {
     let corresponding_decimalElement = document.getElementById("corresponding_decimal");
     corresponding_decimalElement.innerHTML = "= " + summe;
 }
+
+function showConversion() {
+    
+    console.log("showConversion...");
+
+    let surroundingDivElement = document.getElementById("dec_to_n_adic");
+
+     // Remove content if existing
+    let existingElement = document.getElementById("dec_to_n_adic_content");
+    if (existingElement) {
+        existingElement.remove();
+    }
+
+    let base = parseInt(document.getElementById("base").value);
+    
+    // Validate Input
+    let decimalNumber = parseInt(document.getElementById("dec_number").value);
+    console.log("Decimal Number:", decimalNumber)
+    if (decimalNumber < 0) {
+        decimalNumber *= -1;
+        document.getElementById("dec_number").value = decimalNumber;
+    } else if (decimalNumber == 0) {
+        decimalNumber = 1;
+        document.getElementById("dec_number").value = decimalNumber;
+    }
+    console.log("showConversion – decimalNumber:", decimalNumber, "Base", base, base**0);
+    
+    // Create surrounding div element
+    let newContentElement = document.createElement("div");
+    newContentElement.id = "dec_to_n_adic_content";
+    surroundingDivElement.appendChild(newContentElement);
+
+    // Create table
+    let tableElement = document.createElement("table");
+    tableElement.id = "system_table";
+
+    // Create first row with exponentials
+    let firstRowElement = document.createElement("tr");
+    let firstRowTitleElement = document.createElement("th");
+    firstRowTitleElement.innerHTML = "Stellenwert (Potenz):";
+    firstRowElement.appendChild(firstRowTitleElement);
+
+    // find highest exponent:
+    let exp = 0;
+    while (base**exp <= decimalNumber) {
+        exp += 1;
+    }
+    console.log("highest exp:", exp);
+    
+    for (let stelle = exp-1; stelle >= 0; stelle--) {
+        let thElement = document.createElement("th");
+        thElement.innerHTML = base;
+        let supElement = document.createElement("sup")
+        supElement.innerHTML = stelle;
+        thElement.appendChild(supElement);
+        firstRowElement.appendChild(thElement);
+    }
+    tableElement.appendChild(firstRowElement);
+
+    // Create second row with corresponding decimals
+    let secondRowElement = document.createElement("tr")
+    let secondRowTitleElement = document.createElement("td");
+    secondRowTitleElement.innerHTML = "Stellenwert (dezimal):";
+    secondRowElement.appendChild(secondRowTitleElement);
+    for (let stelle = exp-1; stelle >= 0; stelle--) {
+        let tdElement = document.createElement("td");
+        tdElement.innerHTML = parseInt(base) ** stelle;
+        tdElement.id = "stellenwert" + stelle;
+        secondRowElement.appendChild(tdElement);
+    }
+    tableElement.appendChild(secondRowElement);
+
+    
+    // Create the third row that will contain the first step of the calculations
+    let thirdRowElement = document.createElement("tr");
+    let thirdRowTitleElement = document.createElement("td");
+    thirdRowTitleElement.innerHTML = "Rechnung:";
+    thirdRowElement.appendChild(thirdRowTitleElement);
+    
+    let rest = decimalNumber;
+    for (let stelle = exp-1; stelle >= 0; stelle--) {
+        let tdElement = document.createElement("td");
+        tdElement.innerHTML = rest + "/" + base**stelle;
+        rest = rest % (base**stelle)
+        thirdRowElement.appendChild(tdElement);
+
+    }
+    tableElement.appendChild(thirdRowElement);
+
+    // Create the fourth row that will contain the number
+    let fourthRowElement = document.createElement("tr");
+    let fourthRowTitleElement = document.createElement("th");
+    fourthRowTitleElement.innerHTML = "Umgewandelte Zahl:";
+    fourthRowElement.appendChild(fourthRowTitleElement);
+
+    rest = decimalNumber;
+    for (let stelle = exp-1; stelle >= 0; stelle--) {
+        let thElement = document.createElement("th");
+        thElement.innerHTML = Math.floor(rest / (base**stelle));
+        rest = rest % (base**stelle)
+        fourthRowElement.appendChild(thElement);
+    }
+    tableElement.appendChild(fourthRowElement);
+
+    // Create the fifth row that will contain the number
+    let fifthRowElement = document.createElement("tr");
+    let fifthRowTitleElement = document.createElement("td");
+    fifthRowTitleElement.innerHTML = "Rest:";
+    fifthRowElement.appendChild(fifthRowTitleElement);
+
+    rest = decimalNumber;
+    for (let stelle = exp-1; stelle >= 0; stelle--) {
+        let tdElement = document.createElement("td");
+        tdElement.innerHTML = rest % (base**stelle);
+        rest = rest % (base**stelle)
+        fifthRowElement.appendChild(tdElement);
+    }
+    tableElement.appendChild(fifthRowElement);
+    
+    newContentElement.appendChild(tableElement);
+
+}
+
+
+
+
+/*
+TO-DO: What if decimal number to convert is too small, e.g. 0, 1 or 2?
+*/
