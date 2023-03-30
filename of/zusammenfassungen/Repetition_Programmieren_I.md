@@ -225,7 +225,7 @@ Für die arithmetischen Operatoren gibt es auch die entsprechenden Kurzschreibwe
     * Falls die Variable noch nicht exisitert, wird sie *erstellt*.  
     * Falls die Variable schon exisitert, erhält sie den neuen Wert (der alte Wert wird *überschrieben*).
 * Um den Wert der Variable zu verwenden: Variablennamen schreiben, z.B. `print(schule)` führt zur Ausgabe `KWI`.
-* Verwenden Sie «sprechende» Namen für Variablen: "schule" sagt in diesem Beispiel mehr aus als `a` oder `bob`.  \
+* Verwenden Sie «sprechende» Namen für Variablen: `schule` sagt in diesem Beispiel mehr aus als `a` oder `bob`.  \
   Wenn Sie Ihre Variablen sinnvoll benennen, verstehen Sie ihren Code auch später noch. 
 
 ## Fehlermeldungen
