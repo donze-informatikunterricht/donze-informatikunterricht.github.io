@@ -1,4 +1,4 @@
-# Zusammenfassung Programmieren Teil II
+# Zusammenfassung Programmieren Teil III
 
 Diese Zusammenfassung bietet eine Übersicht über das, was Sie bisher in den Programmierlektionen gesehen haben.
 
@@ -8,6 +8,7 @@ Sie umfasst die folgenden Notebooks:
 * 03a_Variablen.ipynb
 * 03b_for-Schleife.ipynb
 * 04_Wahrheitswerte und bedingte Verzweigungen.ipynb
+* 05_while-Schleife.ipynb
 
 ## Dateien ablegen
 
@@ -340,7 +341,7 @@ Es werden folgende Verzweigungen unterschieden:
 |||
 
 
-### Schleifen (auch Loops genannt): for
+### Schleifen (auch Loops genannt): for, while
 
 Mit Hilf von Schleifen können Codeblöcke wiederholt ausgeführt werden. Sie setzen sich wie folgt zusammen:
 
@@ -384,10 +385,38 @@ for i in range(5): # i durchläuft den BEREICH von 0 bis und OHNE 5
 print(i)           # Am Ende der Schleife sollten Sie die Schleifenvariable VERGESSEN!
 ```
 
+#### While-Schleife
+
+While-Schleifen sind **bedingungsgesteuert**. Der Schleifenkörper wird so lange ausgeführt, wie die Bedingung erfüllt ist. Danach wird der Code unterhalb der Schleife ausgeführt.
+
+**Syntax**
+
+```Python
+while Bedingung: 
+    # Schleifenkörper
+```
+
+Achten Sie auch hier auf den Doppelpunkt und die Einrückungen.
+
+⚠️ Wichtig bei der While-Schleife ist, dass die Bedingung irgendwann erfüllt sein muss, damit die Schleife abgebrochen werden kann. 
+
+
+In Python gibt es zwei Arten von Schleifen, die zählergesteuerte For-Schleife und die bedingungsgesteuerte While-Schleife.
+
+| For-Schleife  | While-Schleife      |
+|:----------|:---------------|
+| zählergesteuert<br/>Die Schleifenvariable dient als Zähler | bedingungsgesteuert<br/>Die Schleife wird solange durchlaufen, wie die Bedingung erfüllt ist. |
+|||
+|<img src="./bilder/Flussdiagramm-Schleife-zaehlergesteuert.svg" style="width:80%"/>|<img src="./bilder/Flussdiagramm-Schleife-kopfgesteuert.svg" style="width:80%"/> | 
+|||
+
 #### Verschachtelte Schleifen
 Schleifen dürfen auch verschachtelt werden:
 
 * for in for
+* for in while
+* while in for
+* while in while
 
 Beispiel Fünfeck mit gestrichelten Linien:
 ```Python
