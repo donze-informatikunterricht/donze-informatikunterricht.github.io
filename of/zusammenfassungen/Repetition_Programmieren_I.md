@@ -81,7 +81,7 @@ zeiliger Kommentar
 |:--------------|:------------------------------------------------------------|
 | `print()`     | Gibt alle durch Kommas abgetrennten Werte aus.<br/>- Kann beliebig viele Argumente entgegennehmen.<br/>- Macht am Ende der Ausgabe einen Zeilenumbruch.|
 | `input(text)` | gibt text aus und erwartet eine Benutzer\*innen-Eingabe.<br/>- Gibt den eingegebenen Wert als String zurück.|
-| `int(wert)`   | Wandelt den gegebenen Wert `wert` in einen String um.|
+| `int(wert)`   | Wandelt den gegebenen Wert `wert` in einen Integer um.|
 | `type(wert)`  | Gibt den Datentyp des Werts `wert` zurück.<br/>- Der `wert` kann auch ein Ausdruck sein, dann wird dieser ausgewertet (berechnet). |
 
 ### Turtlebefehle
