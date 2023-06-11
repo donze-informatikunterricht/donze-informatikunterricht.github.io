@@ -86,7 +86,7 @@ zeiliger Kommentar
 |:--------------|:------------------------------------------------------------|
 | <strong>print()</strong>     | Gibt alle durch Kommas abgetrennten Werte aus.<br/>- Kann beliebig viele Argumente entgegennehmen.<br/>- Macht am Ende der Ausgabe einen Zeilenumbruch.|
 | <strong>input(text)</strong> | gibt text aus und erwartet eine Benutzer\*innen-Eingabe.<br/>- Gibt den eingegebenen Wert als String zurück.|
-| <strong>int(wert)</strong>   | Wandelt den gegebenen Wert `wert` in einen String um.|
+| <strong>int(wert)</strong>   | Wandelt den gegebenen Wert `wert` in einen Integer um.|
 | <strong>type(wert)</strong>  | Gibt den Datentyp des Werts `wert` zurück.<br/>- Der `wert` kann auch ein Ausdruck sein, dann wird dieser ausgewertet (berechnet). |
 
 👉 Beachten Sie, dass input einen String zurückgibt.
