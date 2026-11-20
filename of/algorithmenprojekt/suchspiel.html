@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Suchspiel</title>
+    <link rel="stylesheet" href="styles/suchspiel.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>🔎 Suchspiel</h1>
+      <p>Wie viele Versuche brauchen Sie, um das gesuchte Element zu finden?</p>
+      <p>Gibt es eine Strategie, um schneller fündig zu werden? Funktioniert sie immer?</p>
+      <section id="setup">
+        <h2>1. Liste vorbereiten</h2>
+        <div class="row">
+          <button id="demoNumbers" type="button">Demo Zahlen</button>
+          <button id="demoNames" type="button" class="active">Demo Namen</button>
+          <button id="own" type="button">Eigene Liste</button>
+        </div>
+        <label for="entries">Ein Element pro Zeile</label>
+        <textarea id="entries" spellcheck="false"></textarea>
+        <p id="info" class="hint"></p>
+        <label for="month">Ihr Geburtsmonat</label>
+        <select id="month">
+          <option value="">Bitte wählen</option>
+        </select>
+        <div class="row">
+          <button id="start" class="primary" type="button">Experiment starten</button>
+        </div>
+        <p id="error" class="error" role="alert"></p>
+      </section>
+      <section id="game" class="hidden">
+        <h2>2. Suche</h2>
+        <p id="instruction"></p>
+        <div class="stats">
+          <span>
+            Versuche:
+            <strong id="attempts">0</strong>
+          </span>
+          <span>
+            Zeit:
+            <strong id="clock">0,0 s</strong>
+          </span>
+        </div>
+        <div id="tiles" class="tiles"></div>
+        <form id="numberForm" class="hidden">
+          <label for="numberGuess">Ihr Tipp (1 bis 99)</label>
+          <div class="guess-row">
+            <input id="numberGuess" type="number" min="1" max="99" step="1" inputmode="numeric" required>
+            <button type="submit" class="primary">Prüfen</button>
+          </div>
+        </form>
+        <ol id="guessLog" class="guess-log hidden" aria-label="Bisherige Tipps"></ol>
+        <p id="feedback" aria-live="polite"></p>
+        <div class="row">
+          <button id="next" type="button" class="primary hidden">Nächster Versuch</button>
+          <button id="back" type="button">Liste ändern</button>
+        </div>
+      </section>
+      <section>
+        <h2>3. Verlauf</h2>
+        <p class="hint">Die einzelnen Zahlentipps stehen direkt beim Spiel. Hier sehen Sie die Ergebnisse aller abgeschlossenen Runden.</p>
+        <table class="history">
+          <thead>
+            <tr>
+              <th>Nr.</th>
+              <th>Liste</th>
+              <th>Anordnung</th>
+              <th>Versuche</th>
+              <th>Zeit</th>
+            </tr>
+          </thead>
+          <tbody id="history">
+            <tr>
+              <td colspan="5">Noch keine Ergebnisse.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <p class="note">Alle Eingaben bleiben lokal in diesem Browser. Die Sortierart wird erst in der History nach einem abgeschlossenen Versuch angezeigt.</p>
+    </div>
+    <script src="scripts/suchspiel.js" defer></script>
+  </body>
+</html>
