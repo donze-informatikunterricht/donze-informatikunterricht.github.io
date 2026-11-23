@@ -77,3 +77,8 @@
         width: 60px;
     }
 }
+
+#binhex-content .aufgabe input {
+    width: 7ch;
+    max-width: 100%;
+}
