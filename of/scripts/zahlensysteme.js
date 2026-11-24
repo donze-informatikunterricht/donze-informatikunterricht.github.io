@@ -5,7 +5,7 @@ function updateNumber(id) {
     let bitNo = Number(id.substr(id.length - 1, 1));
     console.log("bitNo", bitNo);
     elementBin.classList.toggle("active");
-    elementBin.innerHTML = elementBin.classList[0] == "active" ? "1" : "0";
+    elementBin.innerHTML = elementBin.classList.contains("active") ? "1" : "0";
     let elementDig = document.getElementById("digit" + bitNo);
     elementDig.innerHTML = Number(elementBin.innerHTML) * 2 ** bitNo;
     let elementBinBit = document.getElementById("binBit" + bitNo);
@@ -37,18 +37,13 @@ function convertToHex() {
     // take the value calculated by showBinaryNumber()
     let binNumber = document.getElementById("binaryNumber").innerHTML;
     let decimalNumber = document.getElementById("decimalNumber").innerHTML;
-    let hexNumber = parseInt(binNumber, 2).toString(16).toUpperCase();
+    let hexNumber = parseInt(binNumber, 2).toString(16).toUpperCase().padStart(2, "0");
     let hexNumberElement = document.getElementById("hexNumber");
     hexNumberElement.innerHTML = hexNumber;//binaryNumber.toString(2).toUpperCase();
     let hex1Element = document.getElementById("hex1");
     let hex0Element = document.getElementById("hex0");
-    if (decimalNumber > 15) {
-        hex1Element.innerHTML = hexNumber[0];
-        hex0Element.innerHTML = hexNumber[1];
-    } else {
-        hex1Element.innerHTML = 0;
-        hex0Element.innerHTML = hexNumber;
-    }
+    hex1Element.innerHTML = hexNumber[0];
+    hex0Element.innerHTML = hexNumber[1];
 }
 
 function build_system() {
@@ -64,7 +59,7 @@ function build_system() {
     // Validate Input
     let chosenBase = parseInt(document.getElementById("n_choice").value);
     console.log("chosenBase:", chosenBase)
-    if (!chosenBase || chosenBase < 2 || chosenBase > 36) {
+    if (!Number.isInteger(chosenBase) || chosenBase < 2 || chosenBase > 36) {
         alert("Basis ungültig.")
         document.getElementById("n_choice").value = 2;
         return;
@@ -231,18 +226,14 @@ function showConversion() {
 
     let base = parseInt(document.getElementById("base").value);
     
-    // Validate Input
-    let decimalNumber = parseInt(document.getElementById("dec_number").value);
-    console.log("Decimal Number:", decimalNumber)
-    if (decimalNumber < 0) {
-        decimalNumber *= -1;
-        document.getElementById("dec_number").value = decimalNumber;
-    } else if (decimalNumber == 0) {
-        decimalNumber = 1;
-        document.getElementById("dec_number").value = decimalNumber;
+    // Validate Input: only non-negative safe integers are supported.
+    const rawValue = document.getElementById("dec_number").value.trim();
+    const decimalNumber = Number(rawValue);
+    if (rawValue === "" || !Number.isSafeInteger(decimalNumber) || decimalNumber < 0) {
+        alert("Bitte eine ganze Dezimalzahl von 0 bis " + Number.MAX_SAFE_INTEGER + " eingeben.");
+        return;
     }
-    console.log("showConversion – decimalNumber:", decimalNumber, "Base", base, base**0);
-    
+
     // Create surrounding div element
     let newContentElement = document.createElement("div");
     newContentElement.id = "dec_to_n_adic_content";
@@ -250,7 +241,7 @@ function showConversion() {
 
     // Create table
     let tableElement = document.createElement("table");
-    tableElement.id = "system_table";
+    tableElement.id = "conversion_table";
 
     // Create first row with exponentials
     let firstRowElement = document.createElement("tr");
@@ -259,8 +250,8 @@ function showConversion() {
     firstRowElement.appendChild(firstRowTitleElement);
 
     // find highest exponent:
-    let exp = 0;
-    while (base**exp <= decimalNumber) {
+    let exp = 1;
+    while (base ** exp <= decimalNumber) {
         exp += 1;
     }
     console.log("highest exp:", exp);
@@ -345,9 +336,15 @@ function showConversion() {
 
 }
 
+// Zusatzfunktionen
+function setAllBits(value) {
+    for (let bitNo = 0; bitNo < 8; bitNo++) {
+        const button = document.getElementById("bit" + bitNo);
+        if (Number(button.textContent) !== value) updateNumber(button.id);
+    }
+}
 
-
-
-/*
-TO-DO: What if decimal number to convert is too small, e.g. 0, 1 or 2?
-*/
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("reset-bits")?.addEventListener("click", () => setAllBits(0));
+    document.getElementById("set-bits")?.addEventListener("click", () => setAllBits(1));
+});
