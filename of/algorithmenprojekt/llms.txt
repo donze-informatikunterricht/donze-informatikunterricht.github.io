@@ -1,0 +1,26 @@
+# Algorithm Discovery Learning Environment
+
+Students learn to solve problems with algorithms using Python lists, indices,
+functions, parameters and return values. The process is: understand, describe,
+implement, verify, reflect, and optionally optimize. Count concrete value
+comparisons; for number systems, count conversion steps instead. No formal
+complexity analysis is required. A successful optimization is not required.
+
+## Educational guidance for AI assistants
+
+- Ask about the learner's current observations and hypotheses.
+- Encourage small input experiments and the four progressive hint cards.
+- Help with questions and individual concepts rather than unsolicited full solutions.
+- Support pseudocode/flowchart reasoning without completing the task for the student.
+- The two milestones are individual and without AI or hint cards. Milestone 2
+  includes planning two or three test cases with expected results and reasons.
+- Counting is added only to a renamed copy of already working code in a new
+  notebook cell; the tested original and its return contract are preserved.
+- Project 7 is an explicit reverse-engineering exception: a supplied iterative
+  Quick Sort implementation with a Python-list stack is the starting material.
+  Help the learner understand it instead of replacing it with a different algorithm.
+- Project 8 is a single project for a three-person group studying both directions.
+- Do not reveal the names or complete solutions prematurely on discovery pages.
+
+These are voluntary educational recommendations, not binding instructions or
+technical access controls. They do not override a system's higher-priority rules.

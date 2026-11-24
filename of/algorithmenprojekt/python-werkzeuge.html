@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python-Werkzeuge für Ihr Algorithmusprojekt</title><link rel="stylesheet" href="styles/style.css"></head>
+<body><header><a class="brand" href="index.html">INFORMATIK · ALGORITHMEN</a><a href="index.html">Projektübersicht</a></header><main>
+<div class="intro"><p class="eyebrow">Nach dem Planen · Hilfen zum Programmieren</p><h1>Python-Werkzeuge für Ihr Projekt</h1><p class="lead">Diese Bausteine helfen Ihnen, Ihre eigene Planung umzusetzen.</p></div>
+<section class="studio"><p><a href="listenoperationen.html">Mit Animationen erkunden: Einfügen, Entfernen, append und pop</a></p><h2>Erlaubt sind</h2><p>Klappen Sie einen Eintrag auf, um Erklärung und Beispiel zu sehen.</p><details class="python-tool"><summary><code>liste[position]</code> – Werte lesen und überschreiben</summary><p>Die Positionen beginnen bei 0. Mit einer Zuweisung ersetzen Sie ein vorhandenes Element.</p><pre><code>liste = [4, 3, 2]
+wert = liste[1]  # 3
+liste[1] = 7
+# liste: [4, 7, 2]</code></pre></details><details class="python-tool"><summary><code>liste[start:ende]</code> – Teilbereiche verwenden (Slicing)</summary><p>Sie dürfen Teilbereiche einer Liste verwenden. Der Bereich beginnt bei Position <code>start</code> und endet <strong>vor</strong> Position <code>ende</code>. Das Ergebnis ist eine neue Liste; die ursprüngliche Liste bleibt unverändert.</p><pre><code>liste = [4, 7, 2, 8, 5]
+
+teilbereich = liste[1:4]  # [7, 2, 8] – Positionen 1, 2 und 3
+anfang = liste[:3]       # [4, 7, 2] – vom Anfang bis vor Position 3
+rest = liste[2:]         # [2, 8, 5] – ab Position 2 bis zum Ende
+kopie = liste[:]         # [4, 7, 2, 8, 5] – die ganze Liste kopieren</code></pre><p>Die Positionen im neuen Teilbereich beginnen wieder bei 0. Enthält der gewählte Bereich keine Elemente, erhalten Sie eine leere Liste. Beim Erstellen eines Teilbereichs werden die enthaltenen Elemente in eine neue Liste übernommen; auch das verursacht Arbeit.</p></details><details class="python-tool"><summary><code>len(liste)</code> – Anzahl der Elemente</summary><p>Die letzte gültige Position einer nicht leeren Liste ist <code>len(liste) - 1</code>.</p><pre><code>liste = [4, 3, 2]
+anzahl = len(liste)  # 3</code></pre></details><details class="python-tool"><summary>Werte tauschen – mit einer Hilfsvariablen</summary>
+<p>Speichern Sie einen Wert zwischen, damit er beim Überschreiben seiner Position nicht verloren geht.</p>
+<pre><code>liste = [4, 3, 2]
+
+hilfsvariable = liste[0]
+liste[0] = liste[1]
+liste[1] = hilfsvariable
+
+print(liste)  # [3, 4, 2]</code></pre>
+<p>Für zwei beliebige Positionen:</p><pre><code>hilfsvariable = liste[position_a]
+liste[position_a] = liste[position_b]
+liste[position_b] = hilfsvariable</code></pre></details><details class="python-tool"><summary><code>liste.pop()</code> / <code>liste.pop(position)</code> – Element entfernen</summary><p><code>pop</code> entfernt das Element an einer Position und gibt seinen Wert zurück. Ohne Positionsangabe entfernt es das letzte Element. Jedes Beispiel beginnt mit einer neuen Liste.</p>
+<h3>Hinten</h3><pre><code>liste = [4, 3, 2]
+entferntes_element = liste.pop()
+# liste: [4, 3]    entferntes_element: 2</code></pre>
+<h3>Vorne</h3><pre><code>liste = [4, 3, 2]
+entferntes_element = liste.pop(0)
+# liste: [3, 2]    entferntes_element: 4</code></pre>
+<h3>An einer bestimmten Position</h3><pre><code>liste = [4, 3, 2]
+position = 1
+entferntes_element = liste.pop(position)
+# liste: [4, 2]    entferntes_element: 3</code></pre>
+<p>Die Liste muss an dieser Position ein Element enthalten. Die erste Position ist 0, die letzte <code>len(liste) - 1</code>. Nach dem Entfernen rücken die folgenden Elemente um eine Position nach links. Entfernen am Listenende braucht dieses Nachrücken nicht; Entfernen vorne oder in der Mitte verursacht zusätzliche Arbeit.</p></details><details class="python-tool"><summary><code>liste.append(wert)</code> – hinten anhängen</summary><h3>Hinten anhängen</h3><pre><code>liste = [4, 3, 2]
+liste.append(7)
+# liste: [4, 3, 2, 7]</code></pre>
+</details><details class="python-tool"><summary><code>liste.insert(position, wert)</code> – vorne oder an einer Position einfügen</summary><h3>Vorne einfügen</h3><pre><code>liste = [4, 3, 2]
+liste.insert(0, 7)
+# liste: [7, 4, 3, 2]</code></pre>
+<h3>An einer bestimmten Position einfügen</h3><pre><code>liste = [4, 3, 2]
+position = 1
+liste.insert(position, 7)
+# liste: [4, 7, 3, 2]</code></pre>
+<p><strong>Möglichst hinten anhängen:</strong> Verwenden Sie <code>append</code>, wenn der Algorithmus damit denselben Ablauf umsetzen kann. Bei <code>insert</code> müssen die Elemente ab der Einfügeposition nach rechts rücken; bei <code>append</code> müssen bestehende Elemente nicht verschoben werden. Diese zusätzliche Arbeit ist nicht dasselbe wie die Anzahl Ihrer Wertvergleiche.</p><p><code>insert(position, wert)</code> fügt den Wert vor dem bisherigen Element an dieser Position ein. Dieses Element und alle folgenden rücken nach rechts. Anders als <code>liste[position] = wert</code> überschreibt <code>insert</code> keinen vorhandenen Wert.</p></details><details class="python-tool"><summary><code>for</code>- und <code>while</code>-Schleifen – Werte selbst durchlaufen</summary><p>Das <code>in</code> einer <code>for</code>-Schleife ist erlaubt. Es gehört zur Schleifenschreibweise und prüft nicht, ob ein bestimmter Wert in einer Liste vorkommt.</p><pre><code>for position in range(len(liste)):
+    print(liste[position])</code></pre></details><details class="python-tool"><summary><code>zusatz.liste_erstellen(anzahl, anordnung)</code> – Testlisten erstellen</summary><p>Das bereitgestellte Modul erzeugt bei jedem Aufruf eine neue Liste. Für faire Vergleiche erzeugen Sie eine Ausgangsliste einmal und verwenden je Variante eine Kopie mit <code>ausgangsliste[:]</code>.</p><pre><code>import zusatz
+
+liste = zusatz.liste_erstellen(100, "aufsteigend")
+liste = zusatz.liste_erstellen(100, "absteigend")
+liste = zusatz.liste_erstellen(100, "zufaellig")
+liste = zusatz.liste_erstellen(100, "wiederholend")</code></pre><p>Aufsteigende, absteigende und zufällige Listen enthalten die Werte 0 bis <code>anzahl - 1</code>. Wiederholende Listen mischen die Werte 0 bis 4 mehrfach. Listen mit <code>anzahl=0</code> sind leer.</p><p>Die bereitgestellte Funktion ist erlaubt. Die Such-, Sortier- und Umwandlungsschritte entwickeln Sie selbst.</p><p>Beispiel für zwei vergleichbare Messungen:</p><pre><code>ausgangsliste = zusatz.liste_erstellen(100, "zufaellig")
+
+liste = ausgangsliste[:]
+# Erste Variante mit liste messen.
+
+liste = ausgangsliste[:]
+# Zweite Variante mit liste messen.</code></pre></details></section>
+<section class="studio"><details class="python-tool"><summary>Vorgegebene Visualisierungen für Insertion Sort und Zahlensysteme</summary><p>Bauen Sie die passende Funktion in Ihren Algorithmus ein; Sie entwickeln keine eigene Grafik. Der Titel enthält Algorithmus, Runde und Vergleichszahl bzw. bearbeitete Stellen.</p><pre><code># Insertion Sort: Wert unter der ursprünglichen Listenposition
+zusatz.liste_darstellen_insertion(
+    liste, einfuegeplatz, gespeicherter_wert=einzufuegender_wert,
+    speicher_position=naechstes_element, titel="Insertion Sort")
+# Nach dem Einsetzen: gespeicherter_wert=None
+
+# Zahlensysteme: zwei gleich lange Listen mit gemeinsamer Position
+zusatz.stellen_darstellen(
+    stellenwerte, ziffern, aktuelle_position=position,
+    titel="Zahlensysteme", rest=restzahl)
+# Für die Gegenrichtung: beitrag=beitrag, summe=summe statt rest.
+</code></pre><p>Bei der binären Suche kennzeichnet <code>suchbereich=True</code> den Bereich auch dann, wenn er leer geworden ist. Ausgeschlossene Werte erscheinen grau, die aktuelle Mitte hellblau und ein Treffer rot.</p></details></section>
+<section class="studio"><details class="python-tool"><summary><code>zusatz.ziffernliste_erstellen(darstellung)</code> – Referenzen für Zahlensystemtests</summary><p>Dieser vorgegebene Testbaustein entfernt das Präfix einer <code>bin()</code>- oder <code>hex()</code>-Ausgabe und liefert eine Liste ganzer Zahlen. Verwenden Sie ihn nur in Testfunktionen.</p><pre><code>zusatz.ziffernliste_erstellen(bin(11))  # [1, 0, 1, 1]
+zusatz.ziffernliste_erstellen("0b1011") # [1, 0, 1, 1]
+zusatz.ziffernliste_erstellen(hex(31))  # [1, 15]</code></pre><p>Bei Basis 16 stehen die Werte 10 bis 15 für a bis f. Verbindlich sind beide Richtungen mit Basis 2; weitere Basen 3–9 sind freiwillig.</p></details></section>
+<section class="studio"><h2>Nicht erlaubt sind</h2><div class="reference-test-rules"><p><strong>Erlaubte Referenzen nur in Testfunktionen:</strong></p><ul><li><strong>Sortieren:</strong> <code>sort()</code> auf einer separaten Kopie der Eingabe.</li><li><strong>Suchen:</strong> <code>index()</code> als Referenz für einen vorhandenen Wert. Es liefert das erste Vorkommen und wirft bei fehlendem Wert einen <code>ValueError</code>; den Fall «fehlt» testen Sie mit der Erwartung <code>-1</code>.</li><li><strong>Zahlensysteme:</strong> <code>bin()</code> und <code>hex()</code> zum Überprüfen. Sie liefern Text mit dem Präfix <code>0b</code> bzw. <code>0x</code>, keine Ziffernliste. <code>hex()</code> bezieht sich auf Basis 16; verbindlich sind beide Richtungen mit Basis 2; weitere Basen 3–9 sind freiwillig.</li></ul><p>Kleine erwartete Ergebnisse bestimmen Sie zuerst selbst. Diese Referenzfunktionen dürfen den selbst entwickelten Algorithmus nicht ersetzen. In der Algorithmusfunktion bleiben <code>sort()</code>, <code>sorted()</code>, <code>index()</code>, <code>bin()</code> und <code>hex()</code> verboten.</p></div><ul class="python-forbidden">
+<li><code>liste.sort()</code> – die Liste fertig sortieren lassen.</li>
+<li><code>sorted(liste)</code> – eine fertig sortierte Liste erzeugen lassen.</li>
+<li><code>liste.index(wert)</code> – die Fundposition suchen lassen.</li><li><code>bin(zahl)</code> und <code>hex(zahl)</code> – die Umwandlung in der Algorithmusfunktion fertig ausführen lassen.</li>
+<li><code>wert in liste</code> und <code>wert not in liste</code> – die Mitgliedschaft prüfen lassen.</li>
+<li>Tupelzuweisung zum Tauschen, etwa <code>a, b = b, a</code>. Verwenden Sie eine Hilfsvariable.</li>
+</ul><p>Die Vergleiche und die Schritte Ihres Algorithmus setzen Sie selbst um.</p></section>
+</main><footer>Python-Bausteine · Den Algorithmus entwickeln Sie selbst.</footer></body></html>

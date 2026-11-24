@@ -1,0 +1,19 @@
+/* Gemeinsame Hilfekarten; Animation und Hinweise haben unabhängige Scrollbereiche. */
+.discovery-notice{border-left:4px solid #165b4e;background:#edf4ef;padding:16px 20px;margin:0 0 20px;border-radius:0 8px 8px 0}.discovery-notice p{margin:6px 0 0}.discovery-workspace{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(270px,1fr);gap:20px;align-items:start;margin-bottom:35px}.discovery-animation{min-width:0;position:sticky;top:12px;max-height:calc(100svh - 24px);overflow:auto;margin:0}.discovery-hints{min-width:0;padding:20px;background:#fff;border:1px solid #d6ddd4;border-radius:16px;max-height:calc(100svh - 24px);overflow:auto;position:sticky;top:12px}.discovery-hints h2{font-size:1.35rem;margin-top:0}.discovery-hints p{font-size:1rem}.hint-reminder{font-weight:600}.discovery-card{border-top:1px solid #d6ddd4;padding:14px 0}.discovery-card summary{cursor:pointer;font-weight:700;line-height:1.5}.discovery-card p{margin:12px 0 0}.discovery-card summary:focus-visible,.discovery-ai summary:focus-visible{outline:3px solid #d88710;outline-offset:3px}.discovery-assessment,.discovery-ai p{color:#486159}.discovery-ai summary{font-weight:600;cursor:pointer}.discovery-ai{border-top:1px solid #d6ddd4;padding-top:16px}
+@media(max-width:800px){.discovery-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,3fr) minmax(0,2fr);height:90svh;min-height:460px;gap:12px}.discovery-animation,.discovery-hints{position:static;max-height:none;height:100%;overflow:auto;overscroll-behavior:contain}.discovery-animation{padding:16px}.discovery-hints{padding:14px}.discovery-hints h2{margin-bottom:8px}.discovery-hints>p{margin:8px 0}.discovery-animation .stage{min-height:0;padding:10px 0}.discovery-animation .bars{min-height:0}.discovery-animation .controls{position:sticky;bottom:0;background:white;z-index:3;padding:10px 0}.discovery-animation .studio-head{flex-wrap:wrap}}
+@media print{.discovery-workspace{display:block;height:auto}.discovery-animation,.discovery-hints{position:static;height:auto;max-height:none;overflow:visible}.discovery-card{break-inside:avoid}}
+
+/* Tipps unterhalb der Demo; die Demo bleibt beim Lesen bedienbar. */
+.discovery-workspace{grid-template-columns:minmax(0,1fr);gap:18px}.discovery-animation{position:sticky;top:8px;max-height:58svh;z-index:2;background:white}.discovery-hints{position:static;max-height:none;overflow:visible}.discovery-animation .controls{position:sticky;bottom:0;z-index:3;background:white;padding:10px 0}
+@media(max-width:800px){.discovery-workspace{height:auto;min-height:0;grid-template-rows:auto auto}.discovery-animation{position:sticky;top:8px;height:auto;max-height:58svh}.discovery-hints{height:auto;overflow:visible}}
+@media print{.discovery-animation{position:static;max-height:none}.discovery-animation .controls{position:static}}
+
+.hint-unlock-form input{max-width:100%;min-width:0}.hint-unlock-form label{font-weight:600}#hint-cards[hidden]{display:none}
+
+/* Die Demo nutzt ihre natürliche Höhe und scrollt mit der gesamten Seite. */
+.discovery-workspace{height:auto;min-height:0;grid-template-rows:auto auto}
+.discovery-animation{position:static;top:auto;height:auto;max-height:none;overflow:visible}
+.discovery-animation .controls{position:static}
+@media(max-width:800px){.discovery-workspace{height:auto;min-height:0;grid-template-rows:auto auto}.discovery-animation{position:static;top:auto;height:auto;max-height:none;overflow:visible}}
+
+.python-list-input{display:flex;align-items:center;gap:8px;width:100%;margin:8px 0;font-family:ui-monospace,monospace;font-size:1rem}.python-list-input span{flex-shrink:0;white-space:nowrap}.python-list-input input{flex:1;min-width:0;width:100%;font-family:inherit}.discovery-animation .python-list-input input{max-width:none}
